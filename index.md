@@ -1,5 +1,6 @@
 ---
 layout: html.njk
+formUrl: https://forms.office.com/Pages/ResponsePage.aspx?id=yRJQnBa2wkSpF2aBT74-h-sd_7IfUsBBq1o6Cc4k1QNUNUlGMDc4WTBHQjFHMktVWVJSVFBUOVNBUC4u
 ---
 
 ## EPSRC Northern Health Futures Digital Health Hub
@@ -22,7 +23,7 @@ Seven regional National Health Service (NHS) Foundation Trusts:
 
 And over 50+ partners, including regional, national, and global companies; health and care providers; local authorities; innovation accelerators; plus voluntary, community, and social enterprise sector organisations and advocacy groups.
 
-The NortHFutures network is open to all. To get involved and keep updated about the launch this Autumn 2023: [Join the mailing list →](mailto:Emily.Barker@newcastle.ac.uk).
+The NortHFutures network is open to all. To get involved and keep updated about the launch this Autumn 2023: [Join the mailing list →]({{ formUrl }}).
 
 <br>
 
@@ -69,7 +70,7 @@ The hub activities are mobilised around four themes that are grounded in evidenc
 We start work on 1st November 2023 for a 3-Year Pilot Phase. Please join the network, which is open to all, to be kept updated about upcoming events:
 
 - [#NortHFutures](https://twitter.com/search?q=%23NortHFutures)
-- [Join the mailing list →](mailto:Emily.Barker@newcastle.ac.uk)
+- [Join the mailing list →]({{ formUrl }})
 
 ## Leadership
 
