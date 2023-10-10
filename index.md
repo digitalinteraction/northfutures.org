@@ -3,7 +3,7 @@ layout: html.njk
 formUrl: https://forms.office.com/Pages/ResponsePage.aspx?id=yRJQnBa2wkSpF2aBT74-h-sd_7IfUsBBq1o6Cc4k1QNUNUlGMDc4WTBHQjFHMktVWVJSVFBUOVNBUC4u
 ---
 
-## EPSRC Northern Health Futures Digital Health Hub
+## EPSRC Northern Health Futures Digital Hub
 
 The **NortHFutures** Hub is envisioned as a world-leading innovation ecosystem that will facilitate the research, development, and acceleration of responsibly designed, human-centred, and data-rich health-tech to cultivate an entrepreneurial and vibrant community that addresses regional healthcare needs and promotes leadership in Digital Health.
 
