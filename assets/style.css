@@ -46,6 +46,7 @@ header.hero {
 }
 
 .wordmark {
+  font-family: Montserrat, Inter, system-ui;
   font-size: min(calc(24px + 3vw), 64px);
   color: white;
   font-weight: bold;

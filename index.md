@@ -80,4 +80,6 @@ NortHFutures Co-Directors are Prof. Abigail Durrant at Open Lab, Newcastle Unive
 
 ## Contact
 
-**NortHFutures Co-Director** Abigail Durrant will be happy to address any queries about the hub and how to get involved: [abigail.durrant@newcastle.ac.uk](mailto:abigail.durrant@newcastle.ac.uk).
+If you have any queries about the hub and how to get involved, please contact:
+
+**NortHFutures Hub Manager** Jen Wood: [Jennifer.Wood@newcastle.ac.uk](mailto:Jennifer.Wood@newcastle.ac.uk).
