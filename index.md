@@ -55,6 +55,7 @@ We will:
 - Hold networking events and provide access to resources supporting entrepreneurship, innovation, and routes to commercialisation.
 
 Through our joined-up approach, we unite to build ways for populations of all ages to thrive and invest in their possible futures.
+
 Please download this [PDF summary](https://files.openlab.dev/0f689070-4508-49b8-926f-0e526358f8e6) to find out more about the hub activities.
 
 
