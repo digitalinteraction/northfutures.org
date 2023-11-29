@@ -1,0 +1,23 @@
+---
+layout: html.njk
+---
+
+<header class="hero">
+  <img class="hero-background" src="/assets/hero.jpg" />
+  <!-- <img class="hero-brand" src="assets/brand.png" alt="NortHFutures" /> -->
+  <div class="hero-brand" side="right">
+    <center-layout gutters="var(--s0)">
+      <cluster-layout justify="space-between" align="center" space="var(--s-1)">
+        <img src="/assets/northfutures-light.svg" width="420" />
+        <img alt="EPSRC" src="/assets/epsrc.png" width="180" />
+      </cluster-layout>
+    </center-layout>
+  </div>
+</header>
+<main>
+  <center-layout>
+    <section class="flow">
+      {{ content | safe }}
+    </section>
+  </center-layout>
+</main>

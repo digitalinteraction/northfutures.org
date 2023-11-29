@@ -10,34 +10,14 @@
       rel="stylesheet"
       href="https://fonts.openlab.dev/montserrat/montserrat.css"
     />
-    <link rel="stylesheet" href="assets/style.css" />
+    <link rel="stylesheet" href="/assets/style.css" />
   </head>
   <body>
-    <header class="hero">
-      <img class="hero-background" src="assets/hero.jpg" />
-      <!-- <img class="hero-brand" src="assets/brand.png" alt="NortHFutures" /> -->
-      <div class="hero-brand" side="right">
-        <center-layout gutters="var(--s0)">
-          <cluster-layout
-            justify="space-between"
-            align="center"
-            space="var(--s-1)"
-          >
-            <!-- <img alt="NortHFutures" src="assets/wordmark.png" width="300" /> -->
-            <p class="wordmark">NortHFutures</p>
-            <img alt="EPSRC" src="assets/epsrc.png" width="200" />
-          </cluster-layout>
-        </center-layout>
-      </div>
-    </header>
-    <main>
-      <center-layout>
-        <section class="flow">
-          {{ content | safe }}
-        </section>
-      </center-layout>
-    </main>
-    <footer> {{ site.title }} 2023 </footer>
+    {{ content | safe }}
+    <footer>
+      {{ site.title }} 2023 •
+      <a href="/branding">Brand guidelines</a>
+    </footer>
     <!-- @openlab/alembic inject-js -->
   </body>
 </html>

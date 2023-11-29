@@ -1,5 +1,5 @@
 ---
-layout: html.njk
+layout: home.njk
 formUrl: https://forms.office.com/Pages/ResponsePage.aspx?id=yRJQnBa2wkSpF2aBT74-h-sd_7IfUsBBq1o6Cc4k1QNUNUlGMDc4WTBHQjFHMktVWVJSVFBUOVNBUC4u
 ---
 
@@ -57,7 +57,6 @@ We will:
 Through our joined-up approach, we unite to build ways for populations of all ages to thrive and invest in their possible futures.
 
 Please download this [PDF summary](https://files.openlab.dev/0f689070-4508-49b8-926f-0e526358f8e6) to find out more about the hub activities.
-
 
 ## Hub Research Themes
 
