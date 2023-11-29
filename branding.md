@@ -30,11 +30,11 @@ The website style is built on top of [Alembic](https://alembic.openlab.dev), Ope
 
 **NortHFutures** is the project name `Nort-H-Futures`, note the capital `H`.
 
-## Wordmark
+## Logotype
 
-The wordmark is the best way to reference the project in documents or on other wesites.
+The logotype is the best way to reference the project in documents or on other wesites.
 
-> The wordmark contains an alpha background to allow for different background colours but they must be **subtle** and have a good contrast to maintain legibility.
+> The logotype contains an alpha background to allow for different background colours but they must be **subtle** and have a good contrast to maintain legibility.
 
 ### Dark
 
@@ -42,7 +42,7 @@ The dark variant of the logo, for use on lighter backgrounds.
 <a href="/assets/northfutures-dark.svg" download="northfutures-dark.svg">Download</a>.
 
 <div class="pictureBox" style="background: #ffffff">
-<img src="/assets/northfutures-dark.svg" alt="NortHFutures dark wordmark">
+<img src="/assets/northfutures-dark.svg" alt="NortHFutures dark logotype">
 </div>
 
 > **MUST** be displayed on a near-white background
@@ -53,14 +53,14 @@ The light variant of the logo, for use on darker backgrounds.
 <a href="/assets/northfutures-light.svg" download="northfutures-light.svg">Download</a>.
 
 <div class="pictureBox" style="background: #1A1A1A">
-<img src="/assets/northfutures-light.svg" alt="NortHFutures dark wordmark">
+<img src="/assets/northfutures-light.svg" alt="NortHFutures dark logotype">
 </div>
 
 > **MUST** be displayed on a near-black background
 
 ### PNG
 
-The main versions of the wordmark are SVG, to work best on the web and keep filesize down. There are also PNG variants if you need them:
+The main versions of the logotype are SVG, to work best on the web and keep filesize down. There are also PNG variants if you need them:
 
 - <a href="/assets/northfutures-dark.png" download="northfutures-dark.png">northfutures-dark.png</a>
 - <a href="/assets/northfutures-light.png" download="northfutures-light.png">northfutures-light.png</a>
