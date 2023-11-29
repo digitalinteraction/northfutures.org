@@ -24,6 +24,8 @@ colors:
 This is a temporary page containing the NortHFutures brand guidelines.
 It is a **work in progress**.
 
+The website style is built on top of [Alembic](https://alembic.openlab.dev), Open Lab's design toolkit.
+
 ## Wording
 
 **NortHFutures** is the project name `Nort-H-Futures`, note the capital `H`.
@@ -32,7 +34,7 @@ It is a **work in progress**.
 
 The wordmark is the best way to reference the project in documents or on other wesites.
 
-> The wordmark contains an alpha background to allow for different background colours but they must be **subtle** and maintain a good contrast to maintain legibility.
+> The wordmark contains an alpha background to allow for different background colours but they must be **subtle** and have a good contrast to maintain legibility.
 
 ### Dark
 
