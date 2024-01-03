@@ -56,6 +56,19 @@ ul {
   margin-inline: 0;
 }
 
+h2,
 br + * {
-  margin-top: 1.8em !important;
+  --flow: 2em;
+}
+
+/* TODO: moved to labcoat */
+figure > *:not(figcaption) {
+  margin-inline: auto;
+}
+figure > * + * {
+  margin-block-start: var(--s-3);
+}
+figcaption {
+  text-align: center;
+  font-style: italic;
 }

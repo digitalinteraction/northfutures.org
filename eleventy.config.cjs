@@ -22,6 +22,28 @@ module.exports = function (eleventyConfig) {
     },
   })
 
+  eleventyConfig.addShortcode('vimeo', function (id, title, caption) {
+    const url = new URL(`https://player.vimeo.com/video/${id}`)
+    url.searchParams.set('h', '29458ecc0b')
+    url.searchParams.set('badge', '0')
+    url.searchParams.set('autopause', '0')
+    url.searchParams.set('player_id', '0')
+    url.searchParams.set('app_id', '58479')
+
+    const allow = 'autoplay; fullscreen; picture-in-picture'
+    const style = 'width:100%;height:100%;'
+
+    return [
+      '<figure>',
+      '<frame-layout ratio="16:9">',
+      `<iframe src="${url.toString()}" frameborder="0" allow="${allow}" style="${style}" title="${title}">`,
+      '</iframe>',
+      '</frame-layout>',
+      `<figcaption>${caption}</figcaption>`,
+      '</figure>',
+    ].join('\n')
+  })
+
   eleventyConfig.addShortcode(
     'logoset',
     async function (logos = [], size = '150px') {
