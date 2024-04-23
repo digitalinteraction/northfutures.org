@@ -1,0 +1,84 @@
+{% set site_title = (title + ' | ' if title) + site.title -%}
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{{ site_title }}</title>
+
+		<meta name="description" content="{% block description %}{{ site.description }}{% endblock %}">
+		<meta name="robots" content="index,follow">
+		<meta name="generator" content="Eleventy">
+
+		{% if site.icon %}
+		<link rel="shortcut icon" type="image/png" href="{{ site.icon }}"/>
+		{% endif %}
+
+		<!--Twitter Card-->
+		<meta name="twitter:site" content="{{ site.twitter }}">
+		<meta name="twitter:creator" content="{{ site.twitter }}">
+		<meta name="twitter:card" content="summary_large_image">
+		<meta name="twitter:url" content="{{ site.url + page.url }}">
+		<meta name="twitter:title" content="{{ site_title }}">
+		<meta name="twitter:description" content="{{ site.description }}">
+		<meta name="twitter:image" content="{{ site.cover_image }}">
+
+		<!--Schema-->
+		<link rel="author" href="{{ site.url }}">
+		<link rel="publisher" href="{{ site.url }}">
+		<meta itemprop="name" content="{{ site_title }}">
+		<meta itemprop="description" content="{{ site.description }}">
+		<meta itemprop="image" content="{{ site.cover_image }}">
+
+		<!-- OpenGraph -->
+		<meta property="og:url" content="{{site.url + page.url}}">
+		<meta property="og:type" content="website">
+		<meta property="og:title" content="{{ site_title }}">
+		<meta property="og:image" content="{{ site.cover_image }}">
+		<meta property="og:description" content="{{ site.description }}">
+		<meta property="og:site_name" content="{{ site.title }}">
+		<meta property="og:locale" content="{{ site.lang }}">
+		<meta property="article:author" content="{{ site.url }}">
+
+		<!-- @openlab/alembic inject-css -->
+		<link rel="stylesheet" href="https://fonts.openlab.dev/inter/inter.css" />
+		<link rel="stylesheet" href="/assets/style.css" />
+
+		<!-- Ghost injections -->
+		{{ site.codeinjection_head | safe if site.codeinjection_head }}
+		{{ codeinjection_head | safe if codeinjection_head }}
+	</head>
+	<body>
+		<header class="siteHeader">
+			<a href="/">{{ site.title }}</a>
+			<nav>
+				<ul role="list">
+					{% for item in site.navigation %}
+					<li><a href="{{ item.url }}">{{ item.label }}</a></li>
+					{% endfor %}
+				</ul>
+			</nav>
+		</header>
+
+		{{ content | safe }}
+		
+		<footer class="siteFooter">
+			{{ site.title }}
+			&mdash;
+			<nav>
+				<ul role="list">
+					{% for item in site.secondary_navigation %}
+					<li><a href="{{ item.url }}">{{ item.label }}</a></li>
+					{% endfor %}
+				</ul>
+			</nav>
+		</footer>
+
+		<!-- @openlab/alembic inject-js -->
+
+		<!-- Ghost injections -->
+		{{ site.codeinjection_foot | safe if site.codeinjection_foot }}
+		{{ codeinjection_foot | safe if codeinjection_foot }}
+	</body>
+</html>

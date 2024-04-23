@@ -1,0 +1,15 @@
+---
+layout: html.njk
+---
+
+<main>
+	<center-layout>
+		<div class="flow">
+			<h1>Page — {{ doc.title }}</h1>
+			{% if doc.feature_image %}
+			<p>feature — {{ doc.feature_image }}</p>
+			{% endif %}
+			{{ content | safe }}
+		</div>
+	</center-layout>
+</main>

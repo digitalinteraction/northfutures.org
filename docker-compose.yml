@@ -1,0 +1,58 @@
+volumes:
+  mysql: {}
+
+services:
+  mysql:
+    image: mysql:8.3.0
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: secret
+      MYSQL_USER: user
+      MYSQL_PASS: secret
+      MYSQL_DATABASE: user
+    volumes:
+      - mysql:/var/lib/mysql/
+    ports:
+      - 3306:3306
+
+  ghost:
+    image: ghost:5.82.2
+    restart: unless-stopped
+    env_file: .env
+    environment:
+      # https://ghost.org/docs/config/#configuration-options
+      NODE_ENV: development
+      database__client: mysql
+      database__connection__host: mysql
+      database__connection__user: root
+      database__connection__password: secret
+      database__connection__database: user
+      mail__transport: SMTP
+      mail__options__host: smtp.sendgrid.net
+      mail__options__port: 465
+      mail__options__service: SendGrid
+      mail__options__auth__user: apikey
+      mail__from: noreply@openlab.dev
+      # storage__active: s3
+      # GHOST_STORAGE_ADAPTER_S3_PATH_BUCKET: north-futures
+      # GHOST_STORAGE_ADAPTER_S3_ASSET_HOST: https://cdn.northfutures.org/
+      # GHOST_STORAGE_ADAPTER_S3_PATH_PREFIX: /www/
+      # GHOST_STORAGE_ADAPTER_S3_ENDPOINT: https://s3.openlab.dev/
+      # GHOST_STORAGE_ADAPTER_S3_FORCE_PATH_STYLE: "true"
+      # GHOST_STORAGE_ADAPTER_S3_ACL: public-read
+      url: http://localhost:9000
+    volumes:
+      - ./content:/var/lib/ghost/content
+    ports:
+      - 9000:2368
+
+  rebuild:
+    image: node:20-alpine
+    volumes:
+      - ./hack/rebuild.js:/usr/local/script.js
+      - ./source/build.txt:/usr/local/build.txt
+    command:
+      - node
+      - /usr/local/script.js
+    ports:
+      - 9001:9001

@@ -1,0 +1,58 @@
+:root {
+	--stroke: black;
+	--canvas: white;
+	--boundary: var(--s-5);
+	--measure: 80ch;
+
+	/* TODO: these could be alembic renames */
+	--color-foreground: var(--stroke);
+	--color-background: var(--canvas);
+	--border-thin: var(--boundary);
+}
+
+.siteHeader {
+	padding: var(--s-1) var(--s0);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.siteHeader > a {
+	font-weight: 700;
+	text-decoration: none;
+	color: currentColor;
+}
+.siteHeader > nav {
+}
+
+.siteFooter {
+	text-align: center;
+	padding: var(--s3) var(--s1) var(--s1);
+}
+.siteFooter > nav {
+	display: inline-block;
+}
+
+/* nav {} */
+nav > ul[role="list"] {
+	display: inline-flex;
+	gap: var(--s0);
+	margin: 0;
+	flex-wrap: wrap;
+
+	/* Should this be in alembic? */
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+body > main {
+	flex: 1;
+}
+
+.flow > * + * {
+	margin-block-start: var(--flow, 1.2em);
+}
