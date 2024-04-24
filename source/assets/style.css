@@ -8,6 +8,10 @@
 	--color-foreground: var(--stroke);
 	--color-background: var(--canvas);
 	--border-thin: var(--boundary);
+
+	--font-main: "Inter var", Inter, system-ui, sans-serif;
+
+	font-family: var(--font-main);
 }
 
 .siteHeader {
@@ -15,6 +19,13 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+
+	/* position: absolute;
+	top: 0;
+	left: var(--s0);
+	right: var(--s0);
+	border-bottom-left-radius: var(--s-1);
+	border-bottom-right-radius: var(--s-1); */
 }
 .siteHeader > a {
 	font-weight: 700;
@@ -22,6 +33,13 @@
 	color: currentColor;
 }
 .siteHeader > nav {
+}
+
+body:has(> .siteHeader) {
+	position: relative;
+}
+.siteHeader + * {
+	/* padding-top: 3rem; */
 }
 
 .siteFooter {

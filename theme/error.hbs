@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="{{@site.locale}}">
+<head>
+	<meta charset="utf-8" />
+	<title>{{meta_title}}</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	{{!-- preloads --}}
+	<link rel="preconnect" href="https://fonts.openlab.dev/" />
+	<link rel="preconnect" href="https://alembic.openlab.dev/" />
+
+	{{!-- styles --}}
+	<link rel="stylesheet" href="https://alembic.openlab.dev/labcoat.css">
+	<link rel="stylesheet" href="https://fonts.openlab.dev/inter/inter.css">
+	<link rel="stylesheet" href="{{asset "built/screen.css"}}">
+</head>
+<body class="{{body_class}}">
+	<header>NortHFutures</header>
+	<main class="serverError">
+		<center-layout class="flow">
+			<h1 class="error-code">{{statusCode}}</h1>
+			<p class="error-description">{{message}}</p>
+			<a class="error-link" href="{{@site.url}}">Go home →</a>
+
+			{{#if errorDetails}}
+			<h3>Theme errors</h3>
+			
+			{{#foreach errorDetails}}
+			<h4>{{{rule}}}</h4>
+
+			{{#foreach failures}}
+			<dl>
+				<dt>Ref:</dt>
+				<dd>{{ref}}</dd>
+				<dt>Message:</dt>
+				<dd>{{message}}</dd>
+			</dl>
+			{{/foreach}}
+			</li>
+			{{/foreach}}
+			</ul>
+			{{/if}}
+		</center-layout>
+	</main>
+	<footer>
+		<center-layout>
+			<p>{{@site.title}}</p>
+		</center-layout>
+	</footer>
+
+	<script type="module" src="https://alembic.openlab.dev/everything.js"></script>
+
+	{{!-- Ghost outputs required functional scripts with this tag - it should always be the last thing before the closing body tag --}}
+	{{ghost_foot}}
+</body>
+</html>

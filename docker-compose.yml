@@ -19,6 +19,7 @@ services:
     image: ghost:5.82.2
     restart: unless-stopped
     env_file: .env
+    user: node
     environment:
       # https://ghost.org/docs/config/#configuration-options
       NODE_ENV: development
@@ -43,16 +44,21 @@ services:
       url: http://localhost:9000
     volumes:
       - ./content:/var/lib/ghost/content
+      - ./theme:/var/lib/ghost/content/themes/north-futures
+      - ./routes.yaml:/var/lib/ghost/content/settings/routes.yaml
     ports:
       - 9000:2368
 
-  rebuild:
-    image: node:20-alpine
-    volumes:
-      - ./hack/rebuild.js:/usr/local/script.js
-      - ./source/build.txt:/usr/local/build.txt
-    command:
-      - node
-      - /usr/local/script.js
-    ports:
-      - 9001:9001
+  #
+  # 11ty rebuildwebhook
+  #
+  # rebuild:
+  #   image: node:20-alpine
+  #   volumes:
+  #     - ./hack/rebuild.js:/usr/local/script.js
+  #     - ./source/build.txt:/usr/local/build.txt
+  #   command:
+  #     - node
+  #     - /usr/local/script.js
+  #   ports:
+  #     - 9001:9001
