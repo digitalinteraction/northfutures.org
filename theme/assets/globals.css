@@ -14,6 +14,13 @@
 	--font-mono: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas,
 		Liberation Mono, monospace;
 
+	--lazurite: #002148;
+	--dioptase: #68b2b1;
+	--umber: #7f5f54;
+	--terracotta: #dd8770;
+	--sage: #b8d5a7;
+	--chalk: #f1e5cb;
+
 	--site-header-size: 4rem;
 
 	font-size: 16px;
@@ -83,4 +90,33 @@ hr {
 
 .flow > * + * {
 	margin-block-start: var(--flow, 1em);
+}
+
+.accent-lazurite {
+	--accent-main: var(--lazurite);
+	--accent-glare: #d9eaff;
+}
+.accent-dioptase {
+	--accent-main: var(--dioptase);
+	--accent-glare: #eafefe;
+}
+.accent-umber {
+	--accent-main: var(--umber);
+	--accent-glare: #fef2ee;
+}
+.accent-terracotta {
+	--accent-main: var(--terracotta);
+	--accent-glare: #ffefeb;
+}
+.accent-sage {
+	--accent-main: var(--sage);
+	--accent-glare: #f7fff3;
+}
+.accent-chalk {
+	--accent-main: var(--chalk);
+	--accent-glare: #483408;
+}
+
+img.rounded {
+	border-radius: 50%;
 }

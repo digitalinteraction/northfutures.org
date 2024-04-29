@@ -5,3 +5,27 @@
 
 .home-template h1 {
 }
+
+.latest-posts {
+	border-radius: var(--s1);
+	background: var(--accent-main, var(--terracotta));
+}
+.latest-posts header {
+	padding: var(--s1);
+	text-align: center;
+
+	color: white;
+	background: var(--accent-main, var(--terracotta));
+	border-top-left-radius: var(--s1);
+	border-bottom-left-radius: var(--s1);
+}
+.latest-posts stack-layout {
+	padding: var(--s1);
+	background: var(--accent-glare, white);
+
+	border-top-right-radius: var(--s1);
+	border-bottom-right-radius: var(--s1);
+	border-top-left-radius: var(--s0);
+	border-bottom-left-radius: var(--s0);
+	border: 5px solid var(--accent-main, var(--terracotta));
+}

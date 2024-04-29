@@ -3,10 +3,11 @@
 	gap: var(--s-2);
 }
 
+button,
 .kg-btn {
-	background: var(--button-accent, #52aead);
-	color: var(--button-color, white);
-	border: var(--s-4) solid var(--button-border, #77c3c2);
+	background: var(--accent-main, var(--dioptase));
+	color: var(--accent-glare, white);
+	border: var(--s-4) solid rgba(255, 255, 255, 0.3);
 	border-radius: var(--s-3);
 	padding: var(--s-2) var(--s-1);
 	font-size: 1.2em;
