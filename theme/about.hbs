@@ -5,11 +5,25 @@
 {{> 'feature-image'}}
 
 <main>
-	<center-layout class="flow" max="42em" gutters="var(--s0)">
-		<h1>{{title}}</h1>
+	<stack-layout space="s5">
+		<center-layout class="flow" max="42em" gutters="var(--s0)">
+			<h1>{{title}}</h1>
 
-		{{{content}}}
-	</center-layout>
+			{{{content}}}
+		</center-layout>
+
+		<center-layout class="flow" max="42em" gutters="var(--s0)" style="width:100%;">
+			<div>
+				<grid-layout min="200px">
+					<p>Activity A</p>
+					<p>Activity B</p>
+					<p>Activity C</p>
+					<p>Activity D</p>
+				</grid-layout>
+			</div>
+		</center-layout>
+
+	</stack-layout>
 </main>
 
 {{/page}}
