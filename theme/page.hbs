@@ -2,10 +2,14 @@
 
 {{#page}}
 
-<div class="flow">
-	<p>This is a page lol</p>
+{{> 'feature-image'}}
 
-	{{content}}
-</div>
+<main>
+	<center-layout class="flow" max="42em" gutters="var(--s0)">
+		<h1>{{title}}</h1>
+
+		{{{content}}}
+	</center-layout>
+</main>
 
 {{/page}}

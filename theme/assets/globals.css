@@ -14,6 +14,8 @@
 	--font-mono: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas,
 		Liberation Mono, monospace;
 
+	--site-header-size: 4rem;
+
 	font-size: 16px;
 	background-color: var(--color-background);
 	line-height: var(--ratio);
@@ -32,7 +34,7 @@ body > main {
 }
 
 h1 {
-	font-weight: 500;
+	font-weight: bold;
 	font-size: var(--s2);
 	line-height: 1.2;
 }
@@ -45,7 +47,7 @@ h3,
 h4,
 h5,
 h6 {
-	font-weight: 500;
+	font-weight: bold;
 	font-size: var(--s0);
 	line-height: 1.2;
 }
@@ -70,4 +72,15 @@ nav [role="list"] a[aria-current="page"] {
 
 body > main {
 	flex: 1;
+}
+
+hr {
+	--flow: var(--s3);
+	margin-block: var(--s3);
+	border: none;
+	border-bottom: var(--s-3) dashed #ddd;
+}
+
+.flow > * + * {
+	margin-block-start: var(--flow, 1em);
 }

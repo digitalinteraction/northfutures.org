@@ -1,0 +1,7 @@
+.home-template main {
+	--flow: 1.3em;
+	padding-block: var(--s3);
+}
+
+.home-template h1 {
+}

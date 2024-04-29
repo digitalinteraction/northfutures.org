@@ -1,33 +1,20 @@
-{{!-- This should be picked up by ghost but isn't --}}
+{{!-- Custom navigation renderer --}}
 
+<ul role="list">
+	{{#foreach navigation}}
+	<li>
+		<a
+			href="{{url absolute="true"}}"
+			{{#if current}}aria-current="page"{{/if}}
+		>
+			{{label}}
+		</a>
+	</li>
+	{{/foreach}}
+</ul>
+
+{{!--
 {{#if isSecondary}}
-
-<ul role="list">
-	{{#foreach navigation}}
-	<li>
-		<a
-			href="{{url absolute="true"}}"
-			{{#if current}}aria-current="page"{{/if}}
-		>
-			{{label}}
-		</a>
-	</li>
-	{{/foreach}}
-</ul>
-
 {{else}}
-
-<ul role="list">
-	{{#foreach navigation}}
-	<li>
-		<a
-			href="{{url absolute="true"}}"
-			{{#if current}}aria-current="page"{{/if}}
-		>
-			{{label}}
-		</a>
-	</li>
-	{{/foreach}}
-</ul>
-
 {{/if}}
+--}}
