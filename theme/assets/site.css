@@ -3,10 +3,6 @@ body {
 }
 
 .siteHeader {
-	position: absolute;
-	left: 0;
-	right: 0;
-	top: 0;
 	padding-inline: var(--s-1) var(--s0);
 }
 .siteHeader sidebar-layout {
@@ -14,6 +10,10 @@ body {
 }
 .siteHeader cluster-layout {
 	min-height: var(--site-header-size);
+}
+.siteHeader img {
+	max-height: 42px;
+	height: 100%;
 }
 .siteHeader nav {
 	display: inline-flex;
@@ -61,6 +61,11 @@ body {
 }
 
 .siteHeader:has(+ .siteHero) {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+
 	margin-inline: var(--s0);
 	border-bottom-left-radius: var(--s1);
 	border-bottom-right-radius: var(--s1);
