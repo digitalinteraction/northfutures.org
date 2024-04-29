@@ -2,6 +2,9 @@ routes:
   /:
     template: home
     data: page.home
+  /about/:
+    template: about
+    data: page.about
 
 collections:
   /:

@@ -45,7 +45,7 @@ services:
     volumes:
       - ./content:/var/lib/ghost/content
       - ./theme:/var/lib/ghost/content/themes/north-futures
-      # - ./routes.yaml:/var/lib/ghost/content/settings/routes.yaml
+      - ./routes.yaml:/var/lib/ghost/content/settings/routes.yaml
     ports:
       - 9000:2368
 
