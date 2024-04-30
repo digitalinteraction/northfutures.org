@@ -49,20 +49,20 @@
 		</center-layout>
 		{{/get}}
 
-		{{#get "pages" filter="slug:contact-info" as |page|}}
-		{{#page}}
+		{{#get "pages" filter="slug:contact-info" as |contact|}}
+		{{#if contact}}
 		<center-layout class="flow accent-umber" max="34em" gutters="var(--s0)">
 			<sidebar-layout sideWidth="12em" class="contact-info">
 				<aspect-ratio ratio="1:1">
-					<img src="{{feature_image}}" class="rounded">
+					<img src="{{contact.feature_image}}" class="rounded">
 				</aspect-ratio>
 				<div class="flow" style="--flow: 0.5em">
-					<h2>{{title}}</h2>
-					{{{content}}}
+					<h2>{{contact.title}}</h2>
+					{{{contact.content}}}
 				</div>
 			</sidebar-layout>
 		</center-layout>
-		{{/page}}
+		{{/if}}
 		{{/get}}
 	</stack-layout>
 </main>

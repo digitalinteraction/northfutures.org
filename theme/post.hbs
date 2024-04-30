@@ -2,10 +2,43 @@
 
 {{#post}}
 
-<div class="flow">
-	<p>This is a post lol</p>
+{{> 'site-header'}}
 
-	{{content}}
+{{> 'feature-image'}}
+
+<div class="bigBoldCard">
+	<stack-layout space="s3">
+		<center-layout class="flow" max="42em" gutters="s0">
+			<header>
+				<h1>{{title}}</h1>
+				<cluster-layout>
+					{{#foreach authors}}
+					<icon-layout class="author">
+						{{> icon name="author"}}
+						{{name}}
+					</icon-layout>
+					{{/foreach}}
+					
+					{{#foreach tags}}
+					<icon-layout class="tag">
+						{{> icon name="tag"}}
+						{{name}}
+					</icon-layout>
+					{{/foreach}}
+				</cluster-layout>
+			</header>
+		</center-layout>
+
+		<main class="flow">
+			<center-layout class="flow" max="42em" gutters="s0">
+				{{content}}
+			</center-layout>
+		</main>
+	</stack-layout>
+</div>
+
+<div class="well accent-lazurite">
+	{{> site-footer}}
 </div>
 
 {{/post}}

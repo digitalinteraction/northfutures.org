@@ -1,9 +1,5 @@
 .home-template main {
 	--flow: 1.3em;
-	padding-block-start: var(--s3);
-}
-
-.home-template h1 {
 }
 
 .latest-posts {
