@@ -1,22 +1,11 @@
 {
-  "private": "true",
-  "devDependencies": {
-    "@11ty/eleventy": "^2.0.1",
-    "@11ty/eleventy-plugin-rss": "^1.2.0",
-    "@openlab/alembic": "^0.3.3",
-    "@tryghost/content-api": "^1.11.20",
-    "dotenv": "^16.4.5",
-    "eleventy-plugin-lazyimages": "^2.1.2",
-    "eleventy-plugin-local-images": "^0.4.1",
-    "ghost-cli": "^1.26.0",
-    "gscan": "^4.43.0",
-    "markdown-it": "^14.1.0",
-    "markdown-it-anchor": "^8.6.7",
-    "prettier": "^3.0.0"
-  },
-  "prettier": {},
-  "scripts": {
-    "start": "eleventy --serve",
-    "build": "eleventy"
-  }
+	"private": "true",
+	"devDependencies": {
+		"@openlab/alembic": "^0.3.3",
+		"@tryghost/content-api": "^1.11.20",
+		"ghost-cli": "^1.26.0",
+		"gscan": "^4.43.0",
+		"prettier": "^3.0.0"
+	},
+	"prettier": {}
 }

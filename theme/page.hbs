@@ -2,14 +2,20 @@
 
 {{#page}}
 
+{{> 'site-header'}}
+
 {{> 'feature-image'}}
 
-<main>
+<main class="bigBoldCard">
 	<center-layout class="flow" max="42em" gutters="var(--s0)">
 		<h1>{{title}}</h1>
 
 		{{{content}}}
 	</center-layout>
 </main>
+
+<div class="well accent-lazurite">
+	{{> 'site-footer'}}
+</div>
 
 {{/page}}

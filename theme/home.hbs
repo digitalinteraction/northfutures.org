@@ -2,9 +2,11 @@
 
 {{#page}}
 
+{{> 'site-header'}}
+
 {{> 'feature-image'}}
 
-<main>
+<main class="bigBoldCard">
 	<stack-layout space="s5">
 		<center-layout class="flow" max="34em" gutters="var(--s0)">
 			<h1>{{title}}</h1>
@@ -12,7 +14,7 @@
 			{{{content}}}
 		</center-layout>
 		
-		{{#get "posts" limit="3"}}
+		{{#get "posts" limit="3" filter="tag:-hash-partner"}}
 		<center-layout class="flow accent-terracotta" max="46em">
 			<sidebar-layout sideWidth="12em" class="latest-posts" space="0">
 				<header class="flow">
@@ -38,7 +40,7 @@
 						<a href="/posts" class="kg-btn accent-dioptase">
 							<icon-layout>
 								More posts
-								{{> "icon" name="right"}}
+								{{!-- {{> "icon" name="right"}} --}}
 							</icon-layout>
 						</a>
 					</cluster-layout>
@@ -49,30 +51,42 @@
 
 		{{#get "pages" filter="slug:contact-info" as |page|}}
 		{{#page}}
-		<center-layout class="flow" max="34em" gutters="var(--s0)">
-			<sidebar-layout sideWidth="12em">
+		<center-layout class="flow accent-umber" max="34em" gutters="var(--s0)">
+			<sidebar-layout sideWidth="12em" class="contact-info">
 				<aspect-ratio ratio="1:1">
 					<img src="{{feature_image}}" class="rounded">
 				</aspect-ratio>
-				<div class="flow">
+				<div class="flow" style="--flow: 0.5em">
 					<h2>{{title}}</h2>
-					
 					{{{content}}}
-
-					<cluster-layout>
-						<a href="mailto:{{excerpt}}">
-							<icon-layout>
-								{{> "icon" name="email"}}
-								{{excerpt}}
-							</icon-layout>
-						</a>
-					</cluster-layout>
 				</div>
 			</sidebar-layout>
 		</center-layout>
 		{{/page}}
 		{{/get}}
-
 	</stack-layout>
 </main>
+
+<div class="well accent-lazurite">
+	<stack-layout space="s5">
+		<center-layout>
+			<box-layout class="card flow">
+				<h2>Our partners</h2>
+
+				{{#get "posts" filter="tag:hash-partner+featured:true" order="title ASC"}}
+				<grid-layout min="150px" space="var(--s2)">
+					{{#foreach posts}}
+						<img src="{{feature_image}}" alt="{{title}}">
+					{{/foreach}}
+				</grid-layout>
+				{{/get}}
+			</box-layout>
+		</center-layout>
+
+		{{> 'site-footer'}}
+	</stack-layout>
+</div>
+
+
+
 {{/page}}

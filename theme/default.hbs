@@ -12,34 +12,14 @@
 	{{!-- styles --}}
 	<link rel="stylesheet" href="https://alembic.openlab.dev/everything.css">
 	<link rel="stylesheet" href="https://fonts.openlab.dev/inter/inter.css">
-	<link rel="stylesheet" href="{{asset "screen.css"}}">
+	<link rel="stylesheet" href="{{asset "css/screen.css"}}">
 	
 	{{!-- This tag outputs all your advanced SEO meta, structured data, and other important settings,
 	it should always be the last tag before the closing head tag --}}
 	{{ghost_head}}
 </head>
 <body class="{{body_class}}">
-	<header class="siteHeader">
-		<sidebar-layout>
-			<cluster-layout justify="space-between" align="center" space="var(--s-3)">
-				<a href="/"><img src="{{asset "brand-dark.png"}}" height="42"></a>
-				<nav>
-					{{navigation}}
-				</nav>
-			</cluster-layout>
-		</sidebar-layout>
-	</header>
 	{{{body}}}
-	<footer class="siteFooter">
-		<center-layout>
-			<cluster-layout justify="space-between">
-				<span>{{@site.title}}</span>
-				<nav>
-					{{navigation type="secondary"}}
-				</nav>
-			</cluster-layout>
-		</center-layout>
-	</footer>
 
 	<script type="module" src="https://alembic.openlab.dev/everything.js"></script>
 

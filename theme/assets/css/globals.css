@@ -88,6 +88,12 @@ hr {
 	border-bottom: var(--s-3) dashed #ddd;
 }
 
+blockquote {
+	font-family: serif;
+	padding-inline-start: var(--s0);
+	border-inline-start: var(--s-3) solid currentColor;
+}
+
 .flow > * + * {
 	margin-block-start: var(--flow, 1em);
 }

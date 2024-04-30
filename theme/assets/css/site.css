@@ -22,9 +22,8 @@ body {
 }
 
 .siteFooter {
-	padding: var(--s2) var(--s1) var(--s1);
-}
-.siteFooter nav {
+	/* background-color: var(--accent-main, white);
+	color: var(--accent-glare, black); */
 }
 
 .siteHero {
@@ -38,7 +37,7 @@ body {
 .siteHero > img {
 	width: 100%;
 }
-.siteHero::after {
+/* .siteHero::after {
 	content: "";
 	position: absolute;
 	left: 0;
@@ -46,11 +45,11 @@ body {
 	bottom: 0;
 	aspect-ratio: 1536 / 42;
 
-	background-image: url(/assets/rounded-bottom.svg);
+	background-image: url(/assets/img/rounded-bottom.svg);
 	background-size: 100%;
 	background-position: right 50%;
 	border-bottom: 1px solid white;
-}
+} */
 .siteHero-content {
 	position: absolute;
 	top: 50%;
@@ -73,4 +72,48 @@ body {
 	background-color: var(--color-background);
 }
 .siteHeader + .siteHero {
+}
+
+.well {
+	background-color: var(--accent-main);
+	color: var(--accent-glare);
+	position: relative;
+
+	padding-block: var(--s4) var(--s1);
+}
+.well::before {
+}
+
+.bigBoldCard {
+	position: relative;
+	background: white;
+	padding-block: var(--s4);
+}
+.bigBoldCard::before {
+	content: "";
+	display: block;
+	background-image: url(/assets/img/rounded-head.svg);
+	background-size: 100%;
+	background-position: right 50%;
+	aspect-ratio: 1536 / 42;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	transform: translateY(-99%);
+	z-index: 1;
+}
+.bigBoldCard::after {
+	content: "";
+	display: block;
+	background-image: url(/assets/img/rounded-tail.svg);
+	background-size: 100%;
+	background-position: right 50%;
+	aspect-ratio: 1536 / 42;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	transform: translateY(99%);
+	z-index: 1;
 }

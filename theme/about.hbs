@@ -2,9 +2,11 @@
 
 {{#page}}
 
+{{> 'site-header'}}
+
 {{> 'feature-image'}}
 
-<main>
+<main class="bigBoldCard">
 	<stack-layout space="s5">
 		<center-layout class="flow" max="42em" gutters="var(--s0)">
 			<h1>{{title}}</h1>
@@ -12,18 +14,31 @@
 			{{{content}}}
 		</center-layout>
 
+		{{#get "pages" order="title asc" filter="tag:hash-activity"}}
 		<center-layout class="flow" max="42em" gutters="var(--s0)" style="width:100%;">
-			<div>
-				<grid-layout min="200px">
-					<p>Activity A</p>
-					<p>Activity B</p>
-					<p>Activity C</p>
-					<p>Activity D</p>
-				</grid-layout>
-			</div>
+			<h2>Activities</h2>
+			<grid-layout min="200px">
+				{{#foreach pages}}
+				<article>
+					<a href="{{url}}">
+						<frame-layout ratio="16:9">
+							<img src="{{feature_image}}">
+						</frame-layout>
+					</a>
+					<p>
+						<a href="{{url}}">{{title}}</a>
+					</p>
+				</article>
+				{{/foreach}}
+			</grid-layout>
 		</center-layout>
+		{{/get}}
 
 	</stack-layout>
 </main>
+
+<div class="well accent-lazurite">
+	{{> 'site-footer'}}
+</div>
 
 {{/page}}
