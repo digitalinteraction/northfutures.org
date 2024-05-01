@@ -16,6 +16,10 @@
 		}
 	},
 
+	"paths": {
+		"contentPath": "/var/lib/ghost/content"
+	},
+
 	"mail": {
 		"transport": "SMTP",
 		"from": "noreply@openlab.dev",

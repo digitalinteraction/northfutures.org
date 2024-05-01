@@ -27,7 +27,7 @@ spec:
           envFrom:
             - secretRef: { name: northfutures-env }
           env:
-            - { name: NODE_ENV, value: development }
+            - { name: NODE_ENV, value: production }
       volumes:
         - name: resources
           configMap: { name: northfutures-resources }
