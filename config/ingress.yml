@@ -1,0 +1,23 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: northfutures
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt-prod
+spec:
+  ingressClassName: nginx
+  rules:
+    - host: northfutures.openlab.dev
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: northfutures
+                port:
+                  name: www
+  tls:
+    - hosts:
+        - northfutures.openlab.dev
+      secretName: northfutures.openlab.dev
