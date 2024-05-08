@@ -31,6 +31,16 @@ box-layout.card {
 	border: none;
 }
 
+sidebar-layout.contact-info {
+	justify-content: center;
+}
 sidebar-layout.contact-info aspect-ratio {
 	align-self: center;
+	max-width: 12em;
+}
+
+@media (max-width: 42em) {
+	.latest-posts header {
+		border-top-right-radius: var(--s1);
+	}
 }

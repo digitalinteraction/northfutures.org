@@ -1,0 +1,9 @@
+{{!-- expects "size" and "posts" to be set --}}
+
+{{#if posts}}
+<grid-layout min="{{size}}" space="var(--s2)" class="postGrid">
+	{{#foreach posts}}
+		<img src="{{feature_image}}" alt="{{title}}">
+	{{/foreach}}
+</grid-layout>
+{{/if}}

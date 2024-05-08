@@ -8,16 +8,16 @@
 
 <main class="bigBoldCard">
 	<stack-layout space="s5">
-		<center-layout class="flow" max="42em" gutters="var(--s0)">
+		<center-layout class="flow" max="42em" gutters="s0">
 			<h1>{{title}}</h1>
 
 			{{{content}}}
 		</center-layout>
 
-		{{#get "pages" order="title asc" filter="tag:hash-activity"}}
-		<center-layout class="flow" max="42em" gutters="var(--s0)" style="width:100%;">
+		{{#get "pages" order="title asc" filter="tag:activity"}}
+		<center-layout class="flow" max="42em" gutters="s0">
 			<h2>Activities</h2>
-			<grid-layout min="200px">
+			<grid-layout min="260px">
 				{{#foreach pages}}
 				<article>
 					<a href="{{url}}">
@@ -33,6 +33,31 @@
 			</grid-layout>
 		</center-layout>
 		{{/get}}
+
+		<center-layout class="flow" max="42em" gutters="s0">
+			<h2>Partners</h2>
+			
+			{{#get "posts" order="title asc" filter="tag:hash-partner-university"}}
+			{{#if posts}}
+			<h3>Universities</h3>
+			{{> 'post-grid' posts=posts size="150px"}}
+			{{/if}}
+			{{/get}}
+			
+			{{#get "posts" order="title asc" filter="tag:hash-partner-nhs-trusts"}}
+			{{#if posts}}
+			<h3>Trusts</h3>
+			{{> 'post-grid' posts=posts size="120px"}}
+			{{/if}}
+			{{/get}}
+			
+			{{#get "posts" order="title asc" filter="tag:hash-partner-industry"}}
+			{{#if posts}}
+			<h3>Industry</h3>
+			{{> 'post-grid' posts=posts size="120px"}}
+			{{/if}}
+			{{/get}}
+		</center-layout>
 
 	</stack-layout>
 </main>

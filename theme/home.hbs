@@ -14,9 +14,9 @@
 			{{{content}}}
 		</center-layout>
 		
-		{{#get "posts" limit="3" filter="tag:-hash-partner"}}
-		<center-layout class="flow accent-terracotta" max="46em">
-			<sidebar-layout sideWidth="12em" class="latest-posts" space="0">
+		{{#get "posts" limit="3" filter="tag:-hash-partner-university"}}
+		<center-layout class="flow accent-terracotta" max="46em" gutters="var(--s0)">
+			<sidebar-layout sideWidth="12em" class="latest-posts" space="0" contentMin="70%">
 				<header class="flow">
 					<h2>Connecting</h2>
 				</header>
@@ -69,16 +69,12 @@
 
 <div class="well accent-lazurite">
 	<stack-layout space="s5">
-		<center-layout>
+		<center-layout gutters="var(--s0)">
 			<box-layout class="card flow">
 				<h2>Our partners</h2>
 
-				{{#get "posts" filter="tag:hash-partner+featured:true" order="title ASC"}}
-				<grid-layout min="150px" space="var(--s2)">
-					{{#foreach posts}}
-						<img src="{{feature_image}}" alt="{{title}}">
-					{{/foreach}}
-				</grid-layout>
+				{{#get "posts" filter="tag:hash-partner-university+featured:true" order="title ASC"}}
+				{{> 'post-grid' posts=posts size="150px"}}
 				{{/get}}
 			</box-layout>
 		</center-layout>

@@ -18,7 +18,7 @@ body {
 .siteHeader nav {
 	display: inline-flex;
 	justify-content: flex-end;
-	padding-block: var(--s-3);
+	padding-block: var(--s-2);
 }
 
 .siteFooter {
@@ -101,12 +101,11 @@ body > .bigBoldCard {
 	background-image: url(/assets/img/rounded-head.svg);
 	background-size: 100%;
 	background-position: right 50%;
-	aspect-ratio: 1536 / 42;
+	aspect-ratio: 1536 / 44;
 	position: absolute;
-	top: 0;
+	bottom: 100%;
 	left: 0;
 	right: 0;
-	transform: translateY(-99%);
 	z-index: 1;
 }
 .bigBoldCard::after {
@@ -115,11 +114,20 @@ body > .bigBoldCard {
 	background-image: url(/assets/img/rounded-tail.svg);
 	background-size: 100%;
 	background-position: right 50%;
-	aspect-ratio: 1536 / 42;
+	aspect-ratio: 1536 / 44;
 	position: absolute;
-	bottom: 0;
+	top: 100%;
 	left: 0;
 	right: 0;
-	transform: translateY(99%);
 	z-index: 1;
+}
+
+grid-layout.postGrid {
+	align-items: center;
+}
+
+@media (max-width: 468px) {
+	.siteHeader > sidebar-layout > cluster-layout {
+		justify-content: center;
+	}
 }
