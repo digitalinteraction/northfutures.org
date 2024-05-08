@@ -37,21 +37,21 @@
 		<center-layout class="flow" max="42em" gutters="s0">
 			<h2>Partners</h2>
 			
-			{{#get "posts" order="title asc" filter="tag:hash-partner-university"}}
+			{{#get "posts" order="title asc" filter="tag:hash-university"}}
 			{{#if posts}}
 			<h3>Universities</h3>
 			{{> 'post-grid' posts=posts size="150px"}}
 			{{/if}}
 			{{/get}}
 			
-			{{#get "posts" order="title asc" filter="tag:hash-partner-nhs-trusts"}}
+			{{#get "posts" order="title asc" filter="tag:hash-nhs-trusts"}}
 			{{#if posts}}
 			<h3>Trusts</h3>
 			{{> 'post-grid' posts=posts size="120px"}}
 			{{/if}}
 			{{/get}}
 			
-			{{#get "posts" order="title asc" filter="tag:hash-partner-industry"}}
+			{{#get "posts" order="title asc" filter="tag:hash-industry"}}
 			{{#if posts}}
 			<h3>Industry</h3>
 			{{> 'post-grid' posts=posts size="120px"}}

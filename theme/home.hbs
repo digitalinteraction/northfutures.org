@@ -14,7 +14,7 @@
 			{{{content}}}
 		</center-layout>
 		
-		{{#get "posts" limit="3" filter="tag:-hash-partner-university"}}
+		{{#get "posts" limit="3" filter="tag:-hash-university+tag:-hash-nhs-trust+tag:-hash-industry"}}
 		<center-layout class="flow accent-terracotta" max="46em" gutters="var(--s0)">
 			<sidebar-layout sideWidth="12em" class="latest-posts" space="0" contentMin="70%">
 				<header class="flow">
@@ -73,7 +73,7 @@
 			<box-layout class="card flow">
 				<h2>Our partners</h2>
 
-				{{#get "posts" filter="tag:hash-partner-university+featured:true" order="title ASC"}}
+				{{#get "posts" filter="tag:hash-university" order="title ASC"}}
 				{{> 'post-grid' posts=posts size="150px"}}
 				{{/get}}
 			</box-layout>
