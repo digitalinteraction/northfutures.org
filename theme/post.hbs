@@ -8,8 +8,8 @@
 
 <div class="bigBoldCard">
 	<stack-layout space="s3">
-		<center-layout class="flow" max="42em" gutters="s0">
-			<header>
+		<header>
+			<center-layout class="flow" gutters="s0">
 				<h1>{{title}}</h1>
 				<cluster-layout>
 					{{#foreach authors}}
@@ -26,11 +26,11 @@
 					</icon-layout>
 					{{/foreach}}
 				</cluster-layout>
-			</header>
-		</center-layout>
+			</center-layout>
+		</header>
 
 		<main class="flow">
-			<center-layout class="flow" max="42em" gutters="s0">
+			<center-layout class="flow" gutters="s0">
 				{{content}}
 			</center-layout>
 		</main>

@@ -9,7 +9,7 @@
 <main class="bigBoldCard">
 	<stack-layout space="s5">
 		{{#has tag="#activity"}}
-		<center-layout class="flow" max="42em" gutters="s0">
+		<center-layout class="flow" gutters="s0">
 			<nav class="breadcrumbs">
 				<ul role="list">
 					<li>
@@ -27,7 +27,7 @@
 		{{/has}}
 
 
-		<center-layout class="flow" max="42em" gutters="s0">
+		<center-layout class="flow" gutters="s0">
 			<h1>{{title}}</h1>
 
 			{{{content}}}
@@ -35,7 +35,7 @@
 		
 		{{#get "posts" filter="tag:activity-{{slug}}" limit="4"}}
 		{{#if posts}}
-		<center-layout class="flow" max="42em" gutters="s0">
+		<center-layout class="flow" gutters="s0">
 			<h2>Related posts</h2>
 			<grid-layout>
 				{{#foreach posts}}
