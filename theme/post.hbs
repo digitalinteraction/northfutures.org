@@ -7,34 +7,40 @@
 {{> 'feature-image'}}
 
 <div class="bigBoldCard">
-	<stack-layout space="s3">
-		<header>
-			<center-layout class="flow" gutters="s0">
+	<center-layout class="flow" gutters="s0">
+		{{!-- <nav class="breadcrumbs">
+			<cluster-layout>
+				<a href="/posts/">
+					<icon-layout>{{> icon name="left"}} Back</icon-layout>
+				</a>
+			</cluster-layout>
+		</nav> --}}
+
+		<stack-layout space="s3">
+			<header class="flow">
 				<h1>{{title}}</h1>
 				<cluster-layout>
-					{{#foreach authors}}
 					<icon-layout class="author">
 						{{> icon name="author"}}
-						{{name}}
+						{{authors autolink="false"}}
 					</icon-layout>
-					{{/foreach}}
 					
 					{{#foreach tags}}
-					<icon-layout class="tag">
-						{{> icon name="tag"}}
-						{{name}}
-					</icon-layout>
+					<a href="{{url}}">
+						<icon-layout class="tag">
+							{{> icon name="tag"}}
+							{{name}}
+						</icon-layout>
+					</a>
 					{{/foreach}}
 				</cluster-layout>
-			</center-layout>
-		</header>
+			</header>
 
-		<main class="flow">
-			<center-layout class="flow" gutters="s0">
+			<main class="flow">
 				{{content}}
-			</center-layout>
-		</main>
-	</stack-layout>
+			</main>
+		</stack-layout>
+	</center-layout>
 </div>
 
 <div class="well accent-lazurite">

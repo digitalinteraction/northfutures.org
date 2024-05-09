@@ -64,7 +64,7 @@ a {
 
 nav [role="list"] {
 	display: flex;
-	gap: var(--s-1);
+	gap: var(--s0);
 
 	/* TODO: should these be in alembic? */
 	list-style: none;

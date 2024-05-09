@@ -131,3 +131,7 @@ grid-layout.postGrid {
 		justify-content: center;
 	}
 }
+
+.breadcrumbs:has(+ stack-layout) {
+	margin-block-end: var(--s1);
+}

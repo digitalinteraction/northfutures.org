@@ -7,76 +7,14 @@
 {{> 'feature-image'}}
 
 <main class="bigBoldCard">
-	<stack-layout space="s5">
-		{{#has tag="#activity"}}
-		<center-layout class="flow" gutters="s0">
-			<nav class="breadcrumbs">
-				<ul role="list">
-					<li>
-						<a href="/">
-							<icon-layout>{{> icon name="home"}}Home</icon-layout>
-						</a>
-					</li>
-					<li>
-						<a href="/about/">About</a>
-					</li>
-					<li>{{title}}</li>
-				</ul>
-			</nav>
-		</center-layout>
-		{{/has}}
-
-
-		<center-layout class="flow" gutters="s0">
-			<h1>{{title}}</h1>
-
-			{{{content}}}
-		</center-layout>
-		
-		{{#get "pages" filter="tag:activity-{{slug}}+id:-{{id}}"}}
-		{{#if pages}}
-		<center-layout class="flow" gutters="s0">
-			<h2>Activities</h2>
-			<grid-layout>
-				{{#foreach pages}}
-				<article>
-					<frame-layout ratio="16:9">
-						<a href="{{url}}">
-							<img src="{{feature_image}}">
-						</a>
-					</frame-layout>
-					<p>
-						<a href="{{url}}">{{title}}</a>
-					</p>
-				</article>
-				{{/foreach}}
-			</grid-layout>
-		</center-layout>
-		{{/if}}
-		{{/get}}
-		
-		{{#get "posts" filter="tag:activity-{{slug}}" limit="4"}}
-		{{#if posts}}
-		<center-layout class="flow" gutters="s0">
-			<h2>Related posts</h2>
-			<grid-layout>
-				{{#foreach posts}}
-				<article>
-					<frame-layout ratio="16:9">
-						<a href="{{url}}">
-							<img src="{{feature_image}}">
-						</a>
-					</frame-layout>
-					<p>
-						<a href="{{url}}">{{title}}</a>
-					</p>
-				</article>
-				{{/foreach}}
-			</grid-layout>
-		</center-layout>
-		{{/if}}
-		{{/get}}
-	</stack-layout>
+	<center-layout gutters="s0">
+		<stack-layout space="s5">
+			<section class="flow">
+				<h1>{{title}}</h1>
+				{{{content}}}
+			</section>
+		</stack-layout>
+	</center-layout>
 </main>
 
 <div class="well accent-lazurite">

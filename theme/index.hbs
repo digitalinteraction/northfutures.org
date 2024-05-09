@@ -1,7 +1,35 @@
 {{!< default}}
 
-<main>
-	<center-layout>
-		<p>This is the homepage?</p>
+{{> 'site-header'}}
+
+{{#get "pages" filter="slug:posts" as |page|}}
+{{#page}}
+{{> 'feature-image'}}
+{{/page}}
+{{/get}}
+
+<main class="bigBoldCard">
+	<center-layout class="flow" gutters="s0">
+		<stack-layout space="s3">
+			<header class="flow">
+				{{#get "pages" filter="slug:posts" as |page|}}
+				{{#page}}
+				<h1>{{title}}</h1>
+				{{{content}}}
+				{{/page}}
+				{{/get}}
+			</header>
+
+			{{#foreach posts}}
+			{{> 'post-card'}}
+			{{/foreach}}
+
+			{{pagination}}
+
+		</stack-layout>
 	</center-layout>
 </main>
+
+<div class="well accent-lazurite">
+	{{> 'site-footer'}}
+</div>

@@ -7,9 +7,10 @@ routes:
     data: page.about
 
 collections:
-  /:
-    permalink: /{slug}/
+  /posts/:
+    permalink: /posts/{slug}/
     template: index
+    filter: tag:-hash-university+tag:-hash-nhs-trust+tag:-hash-industry
 
 taxonomies:
   tag: /tag/{slug}/
