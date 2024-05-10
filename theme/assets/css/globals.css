@@ -23,6 +23,8 @@
 
 	--site-header-size: 4rem;
 
+	--highlight: #fafafa;
+
 	font-size: 16px;
 	background-color: var(--color-background);
 	line-height: var(--ratio);
@@ -42,12 +44,12 @@ body > main {
 
 h1 {
 	font-weight: bold;
-	font-size: var(--s2);
+	font-size: var(--s3);
 	line-height: 1.2;
 }
 h2 {
 	font-weight: bold;
-	font-size: var(--s1);
+	font-size: var(--s2);
 	line-height: 1.2;
 }
 h3,
@@ -55,7 +57,7 @@ h4,
 h5,
 h6 {
 	font-weight: bold;
-	font-size: var(--s0);
+	font-size: var(--s1);
 	line-height: 1.2;
 }
 a {
@@ -85,13 +87,25 @@ hr {
 	--flow: var(--s3);
 	margin-block: var(--s3);
 	border: none;
-	border-bottom: var(--s-3) dashed #ddd;
+	border-bottom: 1px solid #ddd;
+	opacity: 0.5;
 }
 
 blockquote {
 	font-family: serif;
 	padding-inline-start: var(--s0);
-	border-inline-start: var(--s-3) solid currentColor;
+	padding-block: var(--s0);
+	border-inline-start: var(--s-2) solid var(--accent-main, var(--dioptase));
+	font-size: 1.4em;
+	background: #ebf6f6;
+	font-style: italic;
+	color: #0e4c4c;
+}
+
+figcaption {
+	text-align: center;
+	margin-block-start: var(--s-3);
+	font-style: italic;
 }
 
 .flow > * + * {
@@ -125,4 +139,8 @@ blockquote {
 
 img.rounded {
 	border-radius: 50%;
+}
+
+:is(h1, h2, h3) + * {
+	--flow: 0.5em;
 }

@@ -6,6 +6,9 @@
 	border-radius: var(--s1);
 	background: var(--accent-main, var(--terracotta));
 }
+.latest-posts h2 {
+	font-size: var(--s1);
+}
 .latest-posts header {
 	padding: var(--s1);
 	text-align: center;

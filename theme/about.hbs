@@ -19,16 +19,7 @@
 			<h2>Activities</h2>
 			<grid-layout min="260px">
 				{{#foreach pages}}
-				<article>
-					<a href="{{url}}">
-						<frame-layout ratio="16:9">
-							<img src="{{feature_image}}">
-						</frame-layout>
-					</a>
-					<p>
-						<a href="{{url}}">{{title}}</a>
-					</p>
-				</article>
+				{{> 'activity'}}
 				{{/foreach}}
 			</grid-layout>
 		</center-layout>
