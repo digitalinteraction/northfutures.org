@@ -107,6 +107,7 @@ body > .bigBoldCard {
 	left: 0;
 	right: 0;
 	z-index: 1;
+	transform: scale(1.1); /* Safari bugs */
 }
 .bigBoldCard::after {
 	content: "";
@@ -120,6 +121,7 @@ body > .bigBoldCard {
 	left: 0;
 	right: 0;
 	z-index: 1;
+	transform: scale(1.1); /* Safari bugs */
 }
 
 grid-layout.postGrid {
