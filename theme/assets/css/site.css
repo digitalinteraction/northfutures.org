@@ -101,12 +101,13 @@ body > .bigBoldCard {
 	background-image: url(/assets/img/rounded-head.svg);
 	background-size: 100%;
 	background-position: right 50%;
-	aspect-ratio: 1536 / 44;
+	aspect-ratio: 350 / 10;
 	position: absolute;
-	bottom: 100%;
+	bottom: calc(100% - 1px);
 	left: 0;
 	right: 0;
 	z-index: 1;
+	background-repeat: no-repeat;
 }
 .bigBoldCard::after {
 	content: "";
@@ -114,12 +115,13 @@ body > .bigBoldCard {
 	background-image: url(/assets/img/rounded-tail.svg);
 	background-size: 100%;
 	background-position: right 50%;
-	aspect-ratio: 1536 / 44;
+	aspect-ratio: 350 / 10;
 	position: absolute;
-	top: 100%;
+	top: calc(100% - 1px);
 	left: 0;
 	right: 0;
 	z-index: 1;
+	background-repeat: no-repeat;
 }
 
 grid-layout.postGrid {

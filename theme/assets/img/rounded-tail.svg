@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="1536px" height="44px" viewBox="0 0 1536 44" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="350px" height="10px" viewBox="0 0 350 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid slice">
     <title>rounded-tail</title>
     <g id="rounded-tail" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <path d="M0,0 C270.288469,28 526.288469,42 768,42 C1009.71153,42 1265.71153,28 1536,0 L1536,44 L0,44 L0,0 Z" id="Rectangle-Copy-3" fill="#FFFFFF" transform="translate(768, 22) scale(1, -1) translate(-768, -22)"></path>
+        <path d="M0,0 C61.5891694,6.36363636 119.922503,9.54545455 175,9.54545455 C230.077497,9.54545455 288.410831,6.36363636 350,0 L350,10 L0,10 L0,0 Z" id="Rectangle-Copy-3" fill="#FFFFFF" transform="translate(175, 5) scale(1, -1) translate(-175, -5)"></path>
     </g>
 </svg>

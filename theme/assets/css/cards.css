@@ -13,6 +13,7 @@ button,
 	font-size: 1.2em;
 	text-decoration: none;
 	box-shadow: 2px 1px 4px rgba(0, 0, 0, 0.15);
+	font-weight: bold;
 }
 
 .kg-width-wide {
