@@ -21,14 +21,13 @@ body {
 	padding-block: var(--s-2);
 }
 
-.siteFooter {
-	/* background-color: var(--accent-main, white);
-	color: var(--accent-glare, black); */
-}
+/* .siteFooter {} */
 
 body > .bigBoldCard {
 	flex: 1;
 }
+
+/* Site Hero */
 
 .siteHero {
 	overflow: hidden;
@@ -41,19 +40,6 @@ body > .bigBoldCard {
 .siteHero > img {
 	width: 100%;
 }
-/* .siteHero::after {
-	content: "";
-	position: absolute;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	aspect-ratio: 1536 / 42;
-
-	background-image: url(/assets/img/rounded-bottom.svg);
-	background-size: 100%;
-	background-position: right 50%;
-	border-bottom: 1px solid white;
-} */
 .siteHero-content {
 	position: absolute;
 	top: 50%;
@@ -62,6 +48,8 @@ body > .bigBoldCard {
 	filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.6));
 	width: 100%;
 }
+
+/* Site header */
 
 .siteHeader:has(+ .siteHero) {
 	position: absolute;
@@ -77,8 +65,14 @@ body > .bigBoldCard {
 
 	box-shadow: 3px 6px 15px rgba(0, 0, 0, 0.24);
 }
-.siteHeader + .siteHero {
+
+@media (max-width: 468px) {
+	.siteHeader > sidebar-layout > cluster-layout {
+		justify-content: center;
+	}
 }
+
+/* Well */
 
 .well {
 	background-color: var(--accent-main);
@@ -89,6 +83,8 @@ body > .bigBoldCard {
 }
 .well::before {
 }
+
+/* Big Bold Card */
 
 .bigBoldCard {
 	position: relative;
@@ -124,16 +120,23 @@ body > .bigBoldCard {
 	background-repeat: no-repeat;
 }
 
+/* Breadcrumbs */
+.breadcrumbs:has(+ stack-layout) {
+	margin-block-end: var(--s1);
+}
+
+.breadcrumbs icon-layout span {
+	text-decoration: underline;
+}
+
+/* Post grid */
+
 grid-layout.postGrid {
 	align-items: center;
 }
 
-@media (max-width: 468px) {
-	.siteHeader > sidebar-layout > cluster-layout {
-		justify-content: center;
-	}
-}
-
-.breadcrumbs:has(+ stack-layout) {
-	margin-block-end: var(--s1);
+/* Post card */
+/* ... */
+.postCard {
+	--flow: 0.5em;
 }

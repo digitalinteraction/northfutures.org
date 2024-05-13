@@ -1,13 +1,18 @@
+#!/usr/bin/env node
+
 import fs from "node:fs/promises";
 import { globby } from "globby";
 import path from "node:path";
+import cp from "node:child_process";
+import { promisify } from "node:util";
 import esbuild from "esbuild";
 import {
-	getBaseScripts,
 	getBaseStyles,
 	getStyles,
 	processHtml,
 } from "@openlab/alembic/tools.js";
+
+const exec = promisify(cp.exec);
 
 // 0. create a temp dir
 const dir = await fs.mkdtemp("build_");
@@ -26,32 +31,32 @@ await esbuild.build({
 });
 
 // 2. process .hbs files w/ alembic
-const alembicStyles = [getBaseStyles()];
+const alembicStyles = [await getBaseStyles()];
 const files = await globby(path.join(dir, "**/*.hbs"));
 for (const file of files) {
 	let contents = await fs.readFile(file, "utf8");
 	for (const [_selector, style] of getStyles(contents)) {
 		alembicStyles.push(style);
 	}
-	if (!file.endsWith("default.hbs")) {
-		contents = processHtml(contents);
+	if (!file.endsWith("/default.hbs")) {
+		contents = processHtml(contents, {
+			extraStyles: [
+				`<link rel="stylesheet" href="/assets/css/alembic.css?n=${Math.random()}">`,
+			],
+		});
 	}
+	await fs.writeFile(file, contents);
 }
 await fs.writeFile(
 	path.join(dir, "assets/css/alembic.css"),
 	alembicStyles.join("\n"),
 );
-// await fs.writeFile(path.join(dir, 'assets/alembic.js'))
-
-const defaultTemplate = await fs.readFile(
-	path.join(dir, "default.hbs"),
-	"utf8",
-);
-// new RegExp(`<!--\\s+@openlab\/alembic\\s+${name}\\s+-->`)
-defaultTemplate.replace(/<!--\s+@openlab\/alembic\s+inject-css\s+-->/, `plop`);
-await fs.writeFile(path.join(dir, "default.hbs"), defaultTemplate);
 
 // 3. zip up the theme
+await fs.rm("north-futures.zip").catch(() => {});
+await exec(`zip -r ../north-futures.zip .`, {
+	cwd: dir,
+});
 
 // 4. clean up
-// await fs.rm(dir, { recursive: true });
+await fs.rm(dir, { recursive: true });

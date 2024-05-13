@@ -8,14 +8,14 @@
 
 <main class="bigBoldCard">
 	<stack-layout space="s5">
-		<center-layout class="flow" max="34em" gutters="var(--s0)">
+		<center-layout class="flow" max="50ch" gutters="var(--s0)">
 			<h1>{{title}}</h1>
 
 			{{{content}}}
 		</center-layout>
 		
 		{{#get "posts" limit="3" filter="tag:-hash-university+tag:-hash-nhs-trust+tag:-hash-industry"}}
-		<center-layout class="flow accent-terracotta" max="46em" gutters="var(--s0)">
+		<center-layout class="flow accent-terracotta" gutters="var(--s0)" max="80ch">
 			<sidebar-layout sideWidth="12em" class="latest-posts" space="0" contentMin="70%">
 				<header class="flow">
 					<h2>Connecting</h2>
@@ -51,8 +51,8 @@
 
 		{{#get "pages" filter="slug:contact-info" as |page|}}
 		{{#page}}
-		<center-layout class="flow accent-umber" max="34em" gutters="var(--s0)">
-			<sidebar-layout sideWidth="12em" class="contact-info">
+		<center-layout class="flow accent-umber" max="50ch" gutters="var(--s0)">
+			<sidebar-layout sideWidth="15ch" class="contact-info">
 				<aspect-ratio ratio="1:1">
 					<img src="{{feature_image}}" class="rounded">
 				</aspect-ratio>

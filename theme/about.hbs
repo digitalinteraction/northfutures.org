@@ -8,14 +8,14 @@
 
 <main class="bigBoldCard">
 	<stack-layout space="s5">
-		<center-layout class="flow" max="42em" gutters="s0">
+		<center-layout class="flow" gutters="s0">
 			<h1>{{title}}</h1>
 
 			{{{content}}}
 		</center-layout>
 
 		{{#get "pages" order="title asc" filter="tag:hash-activity"}}
-		<center-layout class="flow" max="42em" gutters="s0">
+		<center-layout class="flow" gutters="s0">
 			<h2>Activities</h2>
 			<grid-layout min="260px">
 				{{#foreach pages}}
@@ -25,7 +25,7 @@
 		</center-layout>
 		{{/get}}
 
-		<center-layout class="flow" max="42em" gutters="s0">
+		<center-layout class="flow" gutters="s0">
 			<h2>Partners</h2>
 			
 			{{#get "posts" order="title asc" filter="tag:hash-university"}}

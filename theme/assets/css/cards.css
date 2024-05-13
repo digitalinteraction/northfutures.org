@@ -42,5 +42,9 @@ button,
 }
 
 .kg-header-card-content {
-	padding-inline: var(--s2);
+	padding-inline: var(--s3);
+}
+
+.kg-header-card {
+	margin-block: var(--s3);
 }

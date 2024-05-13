@@ -22,8 +22,9 @@
 				{{#foreach pages}}
 				{{#get "pages" filter=(concat "tag:hash-activity-" slug "+id:" ../../id)}}
 				{{#if pages}}
+				<li>/</li>
 				<li>
-					<a href="{{../url}}"><icon-layout space="s-3">{{../title}}</icon-layout></a>
+					<a href="{{../url}}"><icon-layout space="s-3"><span>{{../title}}</span></icon-layout></a>
 				</li>
 				{{/if}}
 				{{/get}}
@@ -64,7 +65,9 @@
 							</a>
 						</frame-layout>
 						<p>
-							<a href="{{url}}">{{title}}</a>
+							<a href="{{url}}">
+								{{title}} →
+							</a>
 						</p>
 					</article>
 					{{/foreach}}

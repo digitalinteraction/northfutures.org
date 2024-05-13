@@ -25,11 +25,22 @@
 
 	--highlight: #fafafa;
 
-	font-size: 16px;
+	font-size: 18px;
 	background-color: var(--color-background);
 	line-height: var(--ratio);
 	font-family: var(--font-main);
 	color: var(--color-dark);
+
+	/* https://typescale.com/ */
+	--t6: 2.986rem;
+	--t5: 2.488rem;
+	--t4: 2.074rem;
+	--t3: 1.728rem;
+	--t2: 1.44rem;
+	--t1: 1.2rem;
+	--t0: 1rem;
+	--t-1: 0.833rem;
+	--t-2: 0.694rem;
 }
 
 body {
@@ -43,21 +54,32 @@ body > main {
 }
 
 h1 {
-	font-weight: bold;
-	font-size: var(--s3);
-	line-height: 1.2;
+	font-size: var(--t6);
 }
 h2 {
-	font-weight: bold;
-	font-size: var(--s2);
-	line-height: 1.2;
+	font-size: var(--t5);
 }
-h3,
-h4,
-h5,
+h3 {
+	font-size: var(--t4);
+}
+h4 {
+	font-size: var(--t3);
+}
+h5 {
+	font-size: var(--t2);
+}
 h6 {
+	font-size: var(--t1);
+}
+small {
+	font-size: var(--t-1);
+}
+sup,
+sub {
+	font-size: var(--t-2);
+}
+:is(h1, h2, h3, h4, h5, h6) {
 	font-weight: bold;
-	font-size: var(--s1);
 	line-height: 1.2;
 }
 a {
@@ -140,6 +162,6 @@ img.rounded {
 	border-radius: 50%;
 }
 
-:is(h1, h2, h3) + * {
+:is(h1, h2, h3, h4, h5, h6) + * {
 	--flow: 0.5em;
 }
