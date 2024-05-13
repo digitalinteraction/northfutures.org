@@ -38,13 +38,11 @@ for (const file of files) {
 	for (const [_selector, style] of getStyles(contents)) {
 		alembicStyles.push(style);
 	}
-	if (!file.endsWith("/default.hbs")) {
-		contents = processHtml(contents, {
-			extraStyles: [
-				`<link rel="stylesheet" href="/assets/css/alembic.css?n=${Math.random()}">`,
-			],
-		});
-	}
+	contents = processHtml(contents, {
+		extraStyles: [
+			`<link rel="stylesheet" href="/assets/css/alembic.css?n=${Math.random()}">`,
+		],
+	});
 	await fs.writeFile(file, contents);
 }
 await fs.writeFile(
