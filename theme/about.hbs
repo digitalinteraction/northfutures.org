@@ -34,7 +34,7 @@
 				
 				{{#get "posts" order="title asc" filter="tag:hash-university"}}
 				{{#if posts}}
-				<section>
+				<section class="flow">
 					<h3>Universities</h3>
 					{{> 'post-grid' posts=posts size="150px"}}
 					{{/if}}
@@ -43,7 +43,7 @@
 
 				{{#get "pages" filter="slug:nhs-info" as |page|}}
 				{{#page}}
-				<section>
+				<section class="flow">
 					<h3>{{title}}</h3>
 					<sidebar-layout sideWidth="20ch" side="right" class="contact-info">
 						<div class="flow" style="--flow: 0.5em">
@@ -59,7 +59,7 @@
 				
 				{{#get "posts" order="title asc" filter="tag:hash-nhs-trusts"}}
 				{{#if posts}}
-				<section>
+				<section class="flow">
 					<h3>Trusts</h3>
 					{{> 'post-grid' posts=posts size="120px"}}
 					{{/if}}
@@ -68,7 +68,7 @@
 				
 				{{#get "posts" order="title asc" filter="tag:hash-industry"}}
 				{{#if posts}}
-				<section>
+				<section class="flow">
 					<h3>Industry</h3>
 					{{> 'post-grid' posts=posts size="120px"}}
 					{{/if}}
