@@ -157,6 +157,14 @@ figcaption {
 	--accent-main: var(--chalk);
 	--accent-glare: #483408;
 }
+.accent-twitter {
+	--accent-main: #0f1419;
+	--accent-glare: white;
+}
+.accent-linkedin {
+	--accent-main: #0a66c2;
+	--accent-glare: white;
+}
 
 img.rounded {
 	border-radius: 50%;

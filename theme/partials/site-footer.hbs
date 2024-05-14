@@ -1,10 +1,18 @@
 <footer class="siteFooter">
 	<center-layout gutters="s0">
-		<cluster-layout justify="space-between">
-			<span>{{@site.title}}</span>
-			<nav>
-				{{navigation type="secondary"}}
-			</nav>
-		</cluster-layout>
+		<stack-layout space="s2">
+			<sidebar-layout side="right" sideWidth="12ch">
+				<p>{{@custom.footer}}</p>
+				<div>
+					<img src="/assets/img/ukri-logo.png" alt="UKRI logo" height="50" width="200">
+				</div>
+			</sidebar-layout>
+			<cluster-layout justify="space-between">
+				<span>{{@site.title}}</span>
+				<nav>
+					{{navigation type="secondary"}}
+				</nav>
+			</cluster-layout>
+		</stack-layout>
 	</center-layout>
 </footer>

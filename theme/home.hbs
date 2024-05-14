@@ -49,21 +49,7 @@
 		</center-layout>
 		{{/get}}
 
-		{{#get "pages" filter="slug:contact-info" as |page|}}
-		{{#page}}
-		<center-layout class="flow accent-umber" max="50ch" gutters="var(--s0)">
-			<sidebar-layout sideWidth="15ch" class="contact-info">
-				<aspect-ratio ratio="1:1">
-					<img src="{{feature_image}}" class="rounded">
-				</aspect-ratio>
-				<div class="flow" style="--flow: 0.5em">
-					<h2>{{title}}</h2>
-					{{{content}}}
-				</div>
-			</sidebar-layout>
-		</center-layout>
-		{{/page}}
-		{{/get}}
+		{{> "contact"}}
 	</stack-layout>
 </main>
 
