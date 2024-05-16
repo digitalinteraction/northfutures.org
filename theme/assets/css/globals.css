@@ -54,21 +54,18 @@ body > main {
 }
 
 h1 {
-	font-size: var(--t6);
-}
-h2 {
 	font-size: var(--t5);
 }
-h3 {
+h2 {
 	font-size: var(--t4);
 }
-h4 {
+h3 {
 	font-size: var(--t3);
 }
-h5 {
+h4 {
 	font-size: var(--t2);
 }
-h6 {
+h5 {
 	font-size: var(--t1);
 }
 small {

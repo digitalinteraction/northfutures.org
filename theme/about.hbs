@@ -16,7 +16,7 @@
 
 		{{#get "pages" order="title asc" filter="tag:hash-activity"}}
 		<center-layout class="flow" gutters="s0" max="80ch">
-			<h2>Activities</h2>
+			<h2 id="activities">Activities</h2>
 			<grid-layout min="260px">
 				{{#foreach pages}}
 				{{> 'activity'}}
@@ -25,11 +25,10 @@
 		</center-layout>
 		{{/get}}
 
-		<center-layout gutters="s0">
+		<center-layout gutters="s0" max="80ch">
 			<stack-layout space="s2">
 				<div class="flow">
-					<h2>Partners</h2>
-					{{!-- <p>TODO: copy to go here</p> --}}
+					<h2 id="partners">Partners</h2>
 				</div>
 				
 				{{#get "posts" order="title asc" filter="tag:hash-university" limit="all"}}

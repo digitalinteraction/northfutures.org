@@ -8,7 +8,7 @@
 
 <main class="bigBoldCard">
 	<stack-layout space="s5">
-		<center-layout class="flow" max="50ch" gutters="var(--s0)">
+		<center-layout class="flow" gutters="var(--s0)">
 			<h1>{{title}}</h1>
 
 			{{{content}}}
@@ -23,7 +23,9 @@
 				<stack-layout space="s3">
 					{{#foreach posts}}
 					<article class="flow" style="--flow: 0.5em">
-						<h3>{{title}}</h3>
+						<h3>
+							<a href="{{url}}">{{title}} →</a>
+						</h3>
 						<p>{{excerpt}}</p>
 						<p>
 							<a href="{{url}}">
@@ -58,32 +60,32 @@
 		<center-layout gutters="s0">
 			<box-layout class="card flow">
 				<stack-layout space="s2">
+					{{#get "posts" filter="tag:hash-university+featured:true" order="title ASC" limit="all"}}
+					{{#if posts}}
 					<section class="flow">
-						{{#get "posts" filter="tag:hash-university+featured:true" order="title ASC" limit="all"}}
-						{{#if posts}}
 						<h3>Universities</h3>
 						{{> 'post-grid' posts=posts size="140px"}}
-						{{/if}}
-						{{/get}}
 					</section>
+					{{/if}}
+					{{/get}}
 					
+					{{#get "posts" filter="tag:hash-nhs-trust+featured:true" order="title ASC" limit="all"}}
+					{{#if posts}}
 					<section class="flow">
-						{{#get "posts" filter="tag:hash-nhs-trust+featured:true" order="title ASC" limit="all"}}
-						{{#if posts}}
 						<h3>NHS Trusts</h3>
 						{{> 'post-grid' posts=posts size="150px"}}
-						{{/if}}
-						{{/get}}
 					</section>
+					{{/if}}
+					{{/get}}
 					
+					{{#get "posts" filter="tag:hash-industry+featured:true" order="title ASC" limit="all"}}
+					{{#if posts}}
 					<section class="flow">
-						{{#get "posts" filter="tag:hash-industry+featured:true" order="title ASC" limit="all"}}
-						{{#if posts}}
 						<h3>Core partners</h3>
 						{{> 'post-grid' posts=posts size="130px"}}
-						{{/if}}
-						{{/get}}
 					</section>
+					{{/if}}
+					{{/get}}
 				</stack-layout>
 			</box-layout>
 		</center-layout>
