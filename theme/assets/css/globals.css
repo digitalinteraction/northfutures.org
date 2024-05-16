@@ -166,6 +166,10 @@ figcaption {
 	--accent-glare: white;
 }
 
+img {
+	height: auto;
+}
+
 img.rounded {
 	border-radius: 50%;
 }

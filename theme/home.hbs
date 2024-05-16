@@ -55,13 +55,36 @@
 
 <div class="well accent-lazurite">
 	<stack-layout space="s5">
-		<center-layout gutters="var(--s0)">
+		<center-layout gutters="s0">
 			<box-layout class="card flow">
-				<h2>Our partners</h2>
-
-				{{#get "posts" filter="tag:hash-university" order="title ASC"}}
-				{{> 'post-grid' posts=posts size="150px"}}
-				{{/get}}
+				<stack-layout space="s2">
+					<section class="flow">
+						{{#get "posts" filter="tag:hash-university+featured:true" order="title ASC" limit="all"}}
+						{{#if posts}}
+						<h3>Universities</h3>
+						{{> 'post-grid' posts=posts size="140px"}}
+						{{/if}}
+						{{/get}}
+					</section>
+					
+					<section class="flow">
+						{{#get "posts" filter="tag:hash-nhs-trust+featured:true" order="title ASC" limit="all"}}
+						{{#if posts}}
+						<h3>NHS Trusts</h3>
+						{{> 'post-grid' posts=posts size="150px"}}
+						{{/if}}
+						{{/get}}
+					</section>
+					
+					<section class="flow">
+						{{#get "posts" filter="tag:hash-industry+featured:true" order="title ASC" limit="all"}}
+						{{#if posts}}
+						<h3>Core partners</h3>
+						{{> 'post-grid' posts=posts size="130px"}}
+						{{/if}}
+						{{/get}}
+					</section>
+				</stack-layout>
 			</box-layout>
 		</center-layout>
 

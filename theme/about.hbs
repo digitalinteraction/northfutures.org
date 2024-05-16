@@ -29,10 +29,10 @@
 			<stack-layout space="s2">
 				<div class="flow">
 					<h2>Partners</h2>
-					<p>TODO: copy to go here</p>
+					{{!-- <p>TODO: copy to go here</p> --}}
 				</div>
 				
-				{{#get "posts" order="title asc" filter="tag:hash-university"}}
+				{{#get "posts" order="title asc" filter="tag:hash-university" limit="all"}}
 				{{#if posts}}
 				<section class="flow">
 					<h3>Universities</h3>
@@ -57,7 +57,7 @@
 				{{/page}}
 				{{/get}}
 				
-				{{#get "posts" order="title asc" filter="tag:hash-nhs-trusts"}}
+				{{#get "posts" order="title asc" filter="tag:hash-nhs-trusts" limit="all"}}
 				{{#if posts}}
 				<section class="flow">
 					<h3>Trusts</h3>
@@ -66,7 +66,7 @@
 				</section>
 				{{/get}}
 				
-				{{#get "posts" order="title asc" filter="tag:hash-industry"}}
+				{{#get "posts" order="title asc" filter="tag:hash-industry" limit="all"}}
 				{{#if posts}}
 				<section class="flow">
 					<h3>Industry</h3>
