@@ -14,10 +14,10 @@
 			{{{content}}}
 		</center-layout>
 		
-		{{#get "posts" limit="3" filter="tag:-hash-university+tag:-hash-nhs-trust+tag:-hash-industry"}}
+		{{#get "posts" limit="3" filter="tag:-hash-university+tag:-hash-nhs-trust+tag:-hash-industry+tag:-hash-person"}}
 		<center-layout class="flow accent-terracotta" gutters="var(--s0)" max="80ch">
 			<sidebar-layout sideWidth="12em" class="latest-posts" space="0" contentMin="70%">
-				<header class="flow">
+				<header>
 					<h2>Connecting</h2>
 				</header>
 				<stack-layout space="s3">
@@ -62,28 +62,28 @@
 				<stack-layout space="s2">
 					{{#get "posts" filter="tag:hash-university+featured:true" order="title ASC" limit="all"}}
 					{{#if posts}}
-					<section class="flow">
-						<h3>Universities</h3>
+					<stack-layout>
+						<h4>Universities</h4>
 						{{> 'post-grid' posts=posts size="140px"}}
-					</section>
+					</stack-layout>
 					{{/if}}
 					{{/get}}
 					
 					{{#get "posts" filter="tag:hash-nhs-trust+featured:true" order="title ASC" limit="all"}}
 					{{#if posts}}
-					<section class="flow">
-						<h3>NHS Trusts</h3>
+					<stack-layout>
+						<h4>NHS Trusts</h4>
 						{{> 'post-grid' posts=posts size="150px"}}
-					</section>
+					</stack-layout>
 					{{/if}}
 					{{/get}}
 					
 					{{#get "posts" filter="tag:hash-industry+featured:true" order="title ASC" limit="all"}}
 					{{#if posts}}
-					<section class="flow">
-						<h3>Core partners</h3>
+					<stack-layout>
+						<h4>Core partners</h4>
 						{{> 'post-grid' posts=posts size="130px"}}
-					</section>
+					</stack-layout>
 					{{/if}}
 					{{/get}}
 				</stack-layout>

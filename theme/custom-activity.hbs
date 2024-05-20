@@ -8,7 +8,7 @@
 
 <main class="bigBoldCard">
 	<center-layout gutters="s0">
-		<nav class="breadcrumbs">
+		{{!-- <nav class="breadcrumbs">
 			<ul role="list">
 				<li>
 					<a href="/about/">
@@ -31,7 +31,7 @@
 				{{/foreach}}
 				{{/get}}
 			</ul>
-		</nav>
+		</nav> --}}
 
 		<stack-layout space="s5">
 			<section class="flow">
@@ -45,7 +45,7 @@
 				<h2>Activities</h2>
 				<grid-layout>
 					{{#foreach pages}}
-					{{> 'activity'}}
+					{{> 'activity-card'}}
 					{{/foreach}}
 				</grid-layout>
 			</section>

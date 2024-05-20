@@ -1,0 +1,38 @@
+{{!< default}}
+
+{{#page}}
+
+{{> 'site-header' }}
+
+{{> 'feature-image' }}
+
+<main class="bigBoldCard">
+	<center-layout gutters="s0">
+		<stack-layout space="s2">
+			<section class="flow">
+				<h1>{{title}}</h1>
+				{{{content}}}
+			</section>
+
+			{{#get "posts" filter="tag:hash-person" order="title asc" limit="all"}}
+			{{#if posts}}
+			<grid-layout min="150px">
+				{{#foreach posts}}
+				<article>
+					<a href="{{url}}">
+						<frame-layout ratio="1:1">
+							<img src="{{feature_image}}" alt="{{title}}" class="rounded">
+						</frame-layout>
+					</a>
+					<center-layout intrinsic>
+						<p>{{title}}</p>
+					</center-layout>
+				</article>
+				{{/foreach}}
+			</grid-layout>
+			{{/if}}
+			{{/get}}
+	</center-layout>
+</main>
+
+{{/page}}

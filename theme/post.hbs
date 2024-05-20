@@ -20,6 +20,11 @@
 			<header class="flow">
 				<h1>{{title}}</h1>
 				<cluster-layout>
+					<icon-layout>
+						{{> icon name="date" }}
+						{{date}}
+					</icon-layout>
+					
 					<icon-layout class="author">
 						{{> icon name="author"}}
 						{{authors autolink="false"}}

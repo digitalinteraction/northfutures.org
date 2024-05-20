@@ -19,7 +19,7 @@
 			<h2 id="activities">Activities</h2>
 			<grid-layout min="260px">
 				{{#foreach pages}}
-				{{> 'activity'}}
+				{{> 'activity-card'}}
 				{{/foreach}}
 			</grid-layout>
 		</center-layout>
@@ -33,17 +33,17 @@
 				
 				{{#get "posts" order="title asc" filter="tag:hash-university" limit="all"}}
 				{{#if posts}}
-				<section class="flow">
-					<h3>Universities</h3>
+				<stack-layout>
+					<h4>Universities</h4>
 					{{> 'post-grid' posts=posts size="150px"}}
 					{{/if}}
-				</section>
+				</stack-layout>
 				{{/get}}
 
 				{{#get "pages" filter="slug:nhs-info" as |page|}}
 				{{#page}}
 				<section class="flow">
-					<h3>{{title}}</h3>
+					<h4>{{title}}</h4>
 					<sidebar-layout sideWidth="20ch" side="right" class="contact-info">
 						<div class="flow" style="--flow: 0.5em">
 							{{{content}}}
@@ -56,22 +56,13 @@
 				{{/page}}
 				{{/get}}
 				
-				{{#get "posts" order="title asc" filter="tag:hash-nhs-trusts" limit="all"}}
-				{{#if posts}}
-				<section class="flow">
-					<h3>Trusts</h3>
-					{{> 'post-grid' posts=posts size="120px"}}
-					{{/if}}
-				</section>
-				{{/get}}
-				
 				{{#get "posts" order="title asc" filter="tag:hash-industry" limit="all"}}
 				{{#if posts}}
-				<section class="flow">
-					<h3>Industry</h3>
+				<stack-layout>
+					<h4>Industry</h4>
 					{{> 'post-grid' posts=posts size="120px"}}
 					{{/if}}
-				</section>
+				</stack-layout>
 				{{/get}}
 			</stack-layout>
 		</center-layout>
