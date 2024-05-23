@@ -3,7 +3,7 @@ body {
 }
 
 .siteHeader {
-	padding-inline: var(--s-1) var(--s0);
+	padding-inline: var(--s-2) var(--s0);
 }
 .siteHeader sidebar-layout {
 	justify-content: space-between;
@@ -12,8 +12,9 @@ body {
 	min-height: var(--site-header-size);
 }
 .siteHeader img {
-	max-height: 42px;
+	max-height: 34px;
 	height: 100%;
+	max-width: 50vw;
 }
 .siteHeader nav {
 	display: inline-flex;
