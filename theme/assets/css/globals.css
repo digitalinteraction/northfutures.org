@@ -115,7 +115,7 @@ blockquote {
 	padding-inline-start: var(--s0);
 	padding-block: var(--s0);
 	border-inline-start: var(--s-2) solid var(--accent-main, var(--dioptase));
-	font-size: 1.4em;
+	font-size: 1.2em;
 	background: #ebf6f6;
 	color: #0e4c4c;
 }
