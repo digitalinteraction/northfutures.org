@@ -1,5 +1,5 @@
-{{# if feature_image }}
-<div class="siteHero">
+{{#if feature_image }}
+<div class="siteHero {{#if size}}siteHero-{{size}}{{/if}}">
 	{{!-- From ghost/source --}}
 	<img
 		srcset="{{img_url feature_image size="s"}} 320w,
@@ -8,6 +8,20 @@
 						{{img_url feature_image size="xl"}} 1200w,
 						{{img_url feature_image size="xxl"}} 2000w"
 		src="{{img_url feature_image size="xl"}}"
+		alt="{{title}}"
+	>
+</div>
+
+{{else if @site.cover_image}}
+
+<div class="siteHero {{#if size}}siteHero-{{size}}{{/if}}">
+	<img
+		srcset="{{img_url @site.cover_image size="s"}} 320w,
+						{{img_url @site.cover_image size="m"}} 600w,
+						{{img_url @site.cover_image size="l"}} 960w,
+						{{img_url @site.cover_image size="xl"}} 1200w,
+						{{img_url @site.cover_image size="xxl"}} 2000w"
+		src="{{img_url @site.cover_image size="xl"}}"
 		alt="{{title}}"
 	>
 </div>

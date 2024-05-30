@@ -174,3 +174,10 @@ img.rounded {
 :is(h1, h2, h3, h4, h5, h6) + * {
 	--flow: 0.5em;
 }
+
+a:has(icon-layout span) {
+	text-decoration: none;
+}
+a > icon-layout span {
+	text-decoration: underline;
+}

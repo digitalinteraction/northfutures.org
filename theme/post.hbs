@@ -2,54 +2,10 @@
 
 {{#post}}
 
-{{> 'site-header'}}
-
-{{> 'feature-image'}}
-
-<div class="bigBoldCard">
-	<center-layout class="flow" gutters="s0">
-		{{!-- <nav class="breadcrumbs">
-			<cluster-layout>
-				<a href="/posts/">
-					<icon-layout>{{> icon name="left"}} Back</icon-layout>
-				</a>
-			</cluster-layout>
-		</nav> --}}
-
-		<stack-layout space="s3">
-			<header class="flow">
-				<h1>{{title}}</h1>
-				<cluster-layout>
-					<icon-layout>
-						{{> icon name="date" }}
-						{{date}}
-					</icon-layout>
-					
-					<icon-layout class="author">
-						{{> icon name="author"}}
-						{{authors autolink="false"}}
-					</icon-layout>
-					
-					{{#foreach tags}}
-					<a href="{{url}}">
-						<icon-layout class="tag">
-							{{> icon name="tag"}}
-							{{name}}
-						</icon-layout>
-					</a>
-					{{/foreach}}
-				</cluster-layout>
-			</header>
-
-			<main class="flow">
-				{{content}}
-			</main>
-		</stack-layout>
-	</center-layout>
-</div>
-
-<div class="well accent-lazurite">
-	{{> site-footer}}
-</div>
+{{#has tag="#person"}}
+	{{> 'post-person'}}
+{{else}}
+	{{> 'post-main'}}
+{{/has}}
 
 {{/post}}

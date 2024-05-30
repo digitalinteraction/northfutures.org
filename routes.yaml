@@ -5,12 +5,27 @@ routes:
   /about/:
     template: about
     data: page.about
+  /people/:
+    template: people
+    data: page.people
 
 collections:
+  /university/:
+    permalink: /university/{slug}/
+    filter: tag:hash-university
+  /nhs-trust/:
+    permalink: /nhs-trust/{slug}/
+    filter: tag:hash-nhs-trust
+  /industry/:
+    permalink: /industry/{slug}/
+    filter: tag:hash-industry
+  /people/:
+    permalink: /people/{slug}/
+    template: person
+    filter: tag:hash-person
   /posts/:
     permalink: /posts/{slug}/
     template: index
-    filter: tag:-hash-university+tag:-hash-nhs-trust+tag:-hash-industry
 
 taxonomies:
   tag: /tag/{slug}/

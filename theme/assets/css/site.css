@@ -38,6 +38,9 @@ body > .bigBoldCard {
 	max-height: 60vh;
 	position: relative;
 }
+.siteHero-s {
+	max-height: 30vh;
+}
 .siteHero > img {
 	width: 100%;
 }
@@ -92,7 +95,7 @@ body > .bigBoldCard {
 	background: white;
 	padding-block: var(--s4);
 }
-.bigBoldCard::before {
+.siteHero + .bigBoldCard::before {
 	content: "";
 	display: block;
 	background-image: url(/assets/img/rounded-head.svg);
@@ -106,7 +109,7 @@ body > .bigBoldCard {
 	z-index: 1;
 	background-repeat: no-repeat;
 }
-.bigBoldCard::after {
+.bigBoldCard:has(+ .well)::after {
 	content: "";
 	display: block;
 	background-image: url(/assets/img/rounded-tail.svg);

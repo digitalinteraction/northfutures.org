@@ -4,10 +4,10 @@
 
 {{> 'site-header' }}
 
-{{> 'feature-image' }}
+{{> 'feature-image' size="s"}}
 
 <main class="bigBoldCard">
-	<center-layout gutters="s0">
+	<center-layout gutters="s0" max="80ch">
 		<stack-layout space="s2">
 			<section class="flow">
 				<h1>{{title}}</h1>
@@ -34,5 +34,9 @@
 			{{/get}}
 	</center-layout>
 </main>
+
+<div class="well accent-lazurite">
+	{{> 'site-footer'}}
+</div>
 
 {{/page}}
