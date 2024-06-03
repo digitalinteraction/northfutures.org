@@ -181,3 +181,9 @@ a:has(icon-layout span) {
 a > icon-layout span {
 	text-decoration: underline;
 }
+
+nav.pagination {
+	display: flex;
+	justify-content: center;
+	gap: var(--s2);
+}
