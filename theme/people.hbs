@@ -13,31 +13,44 @@
 				<h1>{{title}}</h1>
 				{{{content}}}
 			</section>
-
 		</center-layout>
 
-			{{!-- Loop through each activity page first --}}
-			{{#get "pages" filter="tag:activity" order="title asc"  limit="all"}}
-			{{#foreach pages}}
-			<center-layout gutters="s0" max="80ch">
-				<section class="flow">
+		{{!-- Loop through each activity page first --}}
+		{{#get "pages" filter="tag:activity" order="title asc"  limit="all"}}
+		{{#foreach pages}}
+		<center-layout gutters="s0" max="80ch">
+			<section class="flow">
 
-					{{!-- Loop through each person that has that activity tag --}}
-					{{#get "posts" filter="tag:person+tag:activity-{{slug}}" order="title asc" limit="all"}}
-					{{#if posts}}
-					<h2>{{../title}}</h2>
-					<grid-layout min="130px" gap="s0">
-					{{#foreach posts}}
-						{{> 'person-card'}}
-					{{/foreach}}
-					</grid-layout>
-					{{/if}}
-					{{/get}}
-				</section>
-			</center-layout>
-		{{/foreach}}
-		{{/get}}
+				{{!-- Loop through each person that has that activity tag --}}
+				{{#get "posts" filter="tag:person+tag:activity-{{slug}}" order="title asc" limit="all"}}
+				{{#if posts}}
+				<h2>{{../title}}</h2>
+				<grid-layout min="130px" gap="s0">
+				{{#foreach posts}}
+					{{> 'person-card'}}
+				{{/foreach}}
+				</grid-layout>
+				{{/if}}
+				{{/get}}
+			</section>
 		</center-layout>
+	{{/foreach}}
+	{{/get}}
+
+	<center-layout gutters="s0" max="80ch">
+		<section class="flow">
+			{{#get "posts" filter="tag:person+tag:activity-{{slug}}" order="title asc" limit="all"}}
+			{{#if posts}}
+			<h2>Wider team</h2>
+			<grid-layout min="130px" gap="s0">
+			{{#foreach posts}}
+				{{> 'person-card'}}
+			{{/foreach}}
+			</grid-layout>
+			{{/if}}
+			{{/get}}
+		</section>
+	</center-layout>
 	</stack-layout>
 </main>
 
