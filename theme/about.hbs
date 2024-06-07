@@ -14,7 +14,7 @@
 			{{{content}}}
 		</center-layout>
 
-		{{#get "pages" order="title asc" filter="tag:hash-activity"}}
+		{{#get "pages" filter="tag:activity" order="title asc"}}
 		<center-layout class="flow" gutters="s0" max="80ch">
 			<h2 id="activities">Activities</h2>
 			<grid-layout min="300px">
@@ -31,7 +31,7 @@
 					<h2 id="partners">Partners</h2>
 				</div>
 				
-				{{#get "posts" order="title asc" filter="tag:hash-university" limit="all"}}
+				{{#get "posts" filter="tag:hash-university" order="title asc" limit="all"}}
 				{{#if posts}}
 				<stack-layout>
 					<h4>Universities</h4>

@@ -32,11 +32,15 @@ await esbuild.build({
 
 // 2. process .hbs files w/ alembic
 const alembicStyles = [await getBaseStyles()];
+const styledSelectors = new Set();
 const files = await globby(path.join(dir, "**/*.hbs"));
 for (const file of files) {
 	let contents = await fs.readFile(file, "utf8");
-	for (const [_selector, style] of getStyles(contents)) {
-		alembicStyles.push(style);
+	for (const [selector, style] of getStyles(contents)) {
+		if (!styledSelectors.has(selector)) {
+			alembicStyles.push(style);
+			styledSelectors.add(selector);
+		}
 	}
 	contents = processHtml(contents, {
 		extraStyles: [

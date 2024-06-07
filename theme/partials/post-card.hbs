@@ -15,12 +15,7 @@
 			{{authors autolink="false"}}
 		</icon-layout>
 
-		{{#if tags}}
-		<icon-layout>
-			{{> icon name="tag"}}
-			{{tags}}
-		</icon-layout>
-		{{/if}}
+		{{> 'tag-list'}}
 	</cluster-layout>
 	<p class="postCard-excerpt">{{excerpt}}</p>
 	<p class="postCard-action">

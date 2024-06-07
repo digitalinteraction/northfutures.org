@@ -111,7 +111,7 @@ hr {
 }
 
 blockquote {
-	font-family: "Bogart Trial", serif;
+	font-family: var(--font-title);
 	padding-inline-start: var(--s0);
 	padding-block: var(--s0);
 	border-inline-start: var(--s-2) solid var(--accent-main, var(--dioptase));

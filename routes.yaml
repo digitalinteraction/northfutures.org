@@ -22,7 +22,7 @@ collections:
   /people/:
     permalink: /people/{slug}/
     template: person
-    filter: tag:hash-person
+    filter: tag:person
   /posts/:
     permalink: /posts/{slug}/
     template: index
