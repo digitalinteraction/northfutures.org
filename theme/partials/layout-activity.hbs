@@ -4,55 +4,63 @@
 
 <main class="bigBoldCard">
 	<stack-layout space="s5">
-		<center-layout gutters="s0">
-			<section class="flow">
-				<h1>{{title}}</h1>
-				{{{content}}}
-			</section>
-		</center-layout>
+		<section>
+			<center-layout gutters="s0">
+				<div class="flow">
+					<h1>{{title}}</h1>
+					{{{content}}}
+				</div>
+			</center-layout>
+		</section>
 
 		{{#get "pages" filter="tag:activity-{{slug}}+id:-{{id}}"}}
 		{{#if pages}}
-		<center-layout gutters="s0" max="80ch">
-			<section class="flow">
-				<h2>Activities</h2>
-				<grid-layout>
-					{{#foreach pages}}
-					{{> 'activity-card'}}
-					{{/foreach}}
-				</grid-layout>
-			</section>
-		</center-layout>
+		<section>
+			<center-layout gutters="s0" max="80ch">
+				<div class="flow">
+					<h2>Activities</h2>
+					<grid-layout>
+						{{#foreach pages}}
+						{{> 'activity-card'}}
+						{{/foreach}}
+					</grid-layout>
+				</div>
+			</center-layout>
+		</section>
 		{{/if}}
 		{{/get}}
 
 		{{#get "posts" filter="tag:activity-{{slug}}+tag:news" limit="4"}}
 		{{#if posts}}
-		<center-layout gutters="s0">
-			<section class="flow">
-				<h2>Posts</h2>
-				<grid-layout>
-					{{#foreach posts}}
-					{{> 'post-tiny'}}
-					{{/foreach}}
-				</grid-layout>
-			</section>
-		</center-layout>
+		<section>
+			<center-layout gutters="s0">
+				<div class="flow">
+					<h2>Posts</h2>
+					<grid-layout>
+						{{#foreach posts}}
+						{{> 'post-tiny'}}
+						{{/foreach}}
+					</grid-layout>
+				</div>
+			</center-layout>
+		</section>
 		{{/if}}
 		{{/get}}
 			
 		{{#get "posts" filter="tag:activity-{{slug}}+tag:person" limit="all"}}
 		{{#if posts}}
-		<center-layout gutters="s0" max="80ch">
-			<section class="flow">
-				<h2>People</h2>
-				<grid-layout min="150px" gap="s0">
-					{{#foreach posts}}
-					{{> 'person-card'}}
-					{{/foreach}}
-				</grid-layout>
-			</section>
-		</center-layout>
+		<section>
+			<center-layout gutters="s0" max="80ch">
+				<div class="flow">
+					<h2>People</h2>
+					<grid-layout min="150px" gap="s0">
+						{{#foreach posts}}
+						{{> 'person-card'}}
+						{{/foreach}}
+					</grid-layout>
+				</div>
+			</center-layout>
+		</section>
 		{{/if}}
 		{{/get}}
 

@@ -5,14 +5,14 @@
 <div class="bigBoldCard">
 	<center-layout class="flow" gutters="s0">
 		<stack-layout space="s2">
-			<a href="/posts/">
+			{{!-- <a href="/posts/">
 				<icon-layout>
 					{{> icon name="left"}}
 					<span>
 						All posts
 					</span>
 				</icon-layout>
-			</a>
+			</a> --}}
 
 			<header class="flow">
 				<h1>{{title}}</h1>
@@ -32,7 +32,7 @@
 			</header>
 
 			<main class="flow">
-				{{content}}
+				{{{content}}}
 			</main>
 		</stack-layout>
 	</center-layout>

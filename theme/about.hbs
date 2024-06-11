@@ -8,65 +8,72 @@
 
 <main class="bigBoldCard">
 	<stack-layout space="s5">
-		<center-layout class="flow" gutters="s0">
-			<h1>{{title}}</h1>
+		<section>
+			<center-layout class="flow" gutters="s0">
+				<div class="flow">
+					<h1>{{title}}</h1>
 
-			{{{content}}}
-		</center-layout>
+					{{{content}}}
+				</div>
+			</center-layout>
+		</section>
 
 		{{#get "pages" filter="tag:activity" order="title asc"}}
-		<center-layout class="flow" gutters="s0" max="80ch">
-			<h2 id="activities">Activities</h2>
-			<grid-layout min="300px">
-				{{#foreach pages}}
-				{{> 'activity-card'}}
-				{{/foreach}}
-			</grid-layout>
-		</center-layout>
+		<section>
+			<center-layout class="flow" gutters="s0" max="80ch">
+				<h2 id="activities">Activities</h2>
+				<grid-layout min="300px">
+					{{#foreach pages}}
+					{{> 'activity-card'}}
+					{{/foreach}}
+				</grid-layout>
+			</center-layout>
+		</section>
 		{{/get}}
 
-		<center-layout gutters="s0" max="80ch">
-			<stack-layout space="s2">
-				<div class="flow">
-					<h2 id="partners">Partners</h2>
-				</div>
-				
-				{{#get "posts" filter="tag:hash-university" order="title asc" limit="all"}}
-				{{#if posts}}
-				<stack-layout>
-					<h4>Universities</h4>
-					{{> 'post-grid' posts=posts size="150px"}}
-					{{/if}}
-				</stack-layout>
-				{{/get}}
+		<section>
+			<center-layout gutters="s0" max="80ch">
+				<stack-layout space="s2">
+					<div class="flow">
+						<h2 id="partners">Partners</h2>
+					</div>
+					
+					{{#get "posts" filter="tag:hash-university" order="title asc" limit="all"}}
+					{{#if posts}}
+					<stack-layout>
+						<h4>Universities</h4>
+						{{> 'post-grid' posts=posts size="150px"}}
+						{{/if}}
+					</stack-layout>
+					{{/get}}
 
-				{{#get "pages" filter="slug:nhs-info" as |page|}}
-				{{#page}}
-				<section class="flow">
-					<h4>{{title}}</h4>
-					<sidebar-layout sideWidth="20ch" side="right" class="contact-info">
-						<div class="flow" style="--flow: 0.5em">
-							{{{content}}}
-						</div>
-						<aspect-ratio ratio="1:1">
-							<img src="{{feature_image}}">
-						</aspect-ratio>
-					</sidebar-layout>
-				</section>
-				{{/page}}
-				{{/get}}
-				
-				{{#get "posts" order="title asc" filter="tag:hash-industry" limit="all"}}
-				{{#if posts}}
-				<stack-layout>
-					<h4>Industry</h4>
-					{{> 'post-grid' posts=posts size="120px"}}
-					{{/if}}
+					{{#get "pages" filter="slug:nhs-info" as |page|}}
+					{{#page}}
+					<section class="flow">
+						<h4>{{title}}</h4>
+						<sidebar-layout sideWidth="20ch" side="right" class="contact-info">
+							<div class="flow" style="--flow: 0.5em">
+								{{{content}}}
+							</div>
+							<aspect-ratio ratio="1:1">
+								<img src="{{feature_image}}">
+							</aspect-ratio>
+						</sidebar-layout>
+					</section>
+					{{/page}}
+					{{/get}}
+					
+					{{#get "posts" order="title asc" filter="tag:hash-industry" limit="all"}}
+					{{#if posts}}
+					<stack-layout>
+						<h4>Industry</h4>
+						{{> 'post-grid' posts=posts size="120px"}}
+						{{/if}}
+					</stack-layout>
+					{{/get}}
 				</stack-layout>
-				{{/get}}
-			</stack-layout>
-		</center-layout>
-
+			</center-layout>
+		</section>
 	</stack-layout>
 </main>
 

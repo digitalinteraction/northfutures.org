@@ -5,14 +5,14 @@
 <div class="bigBoldCard">
 	<center-layout class="flow" gutters="s0">
 		<stack-layout space="s2">
-			<a href="/people/">
+			{{!-- <a href="/people/">
 				<icon-layout>
 					{{> icon name="left"}}
 					<span>
 						All people
 					</span>
 				</icon-layout>
-			</a>
+			</a> --}}
 
 			<sidebar-layout sideWidth="200px">
 				<div>
@@ -23,7 +23,7 @@
 				<div class="flow">
 					<h1>{{title}}</h1>
 					{{> 'tag-list'}}
-					{{content}}
+					{{{content}}}
 				</div>
 			</sidebar-layout>
 		</stack-layout>

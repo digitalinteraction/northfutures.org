@@ -8,47 +8,52 @@
 
 <main class="bigBoldCard">
 	<stack-layout space="s5">
-		<center-layout class="flow" gutters="var(--s0)">
-			<h1>{{title}}</h1>
-
-			{{{content}}}
-		</center-layout>
+		<section>
+			<center-layout gutters="var(--s0)">
+				<div class="flow">
+					<h1>{{title}}</h1>
+					{{{content}}}
+				</div>
+			</center-layout>
+		</section>
 		
 		{{#get "posts" limit="3" filter="tag:news"}}
-		<center-layout class="flow accent-terracotta" gutters="var(--s0)" max="80ch">
-			<sidebar-layout sideWidth="12em" class="latest-posts" space="0" contentMin="70%">
-				<header>
-					<h2>Connecting</h2>
-				</header>
-				<stack-layout space="s3">
-					{{#foreach posts}}
-					<article class="flow" style="--flow: 0.5em">
-						<h3>
-							<a href="{{url}}">{{title}} →</a>
-						</h3>
-						<p>{{excerpt}}</p>
-						<p>
-							<a href="{{url}}">
+		<section>
+			<center-layout class="flow accent-terracotta" gutters="var(--s0)" max="80ch">
+				<sidebar-layout sideWidth="12em" class="latest-posts" space="0" contentMin="70%">
+					<header>
+						<h2>Connecting</h2>
+					</header>
+					<stack-layout space="s3">
+						{{#foreach posts}}
+						<article class="flow" style="--flow: 0.5em">
+							<h3>
+								<a href="{{url}}">{{title}} →</a>
+							</h3>
+							<p>{{excerpt}}</p>
+							<p>
+								<a href="{{url}}">
+									<icon-layout>
+										Read on
+										{{> "icon" name="right"}}
+									</icon-layout>
+								</a>
+							</p>
+						</article>
+						{{/foreach}}
+
+						<cluster-layout>
+							<a href="/posts" class="kg-btn accent-dioptase">
 								<icon-layout>
-									Read on
-									{{> "icon" name="right"}}
+									More posts
+									{{!-- {{> "icon" name="right"}} --}}
 								</icon-layout>
 							</a>
-						</p>
-					</article>
-					{{/foreach}}
-
-					<cluster-layout>
-						<a href="/posts" class="kg-btn accent-dioptase">
-							<icon-layout>
-								More posts
-								{{!-- {{> "icon" name="right"}} --}}
-							</icon-layout>
-						</a>
-					</cluster-layout>
-				</stack-layout>
-			</sidebar-layout>
-		</center-layout>
+						</cluster-layout>
+					</stack-layout>
+				</sidebar-layout>
+			</center-layout>
+		</section>
 		{{/get}}
 
 		{{> "contact"}}
