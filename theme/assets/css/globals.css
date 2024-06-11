@@ -31,15 +31,15 @@
 	color: var(--color-dark);
 
 	/* https://typescale.com/ */
-	--t6: 2.986rem;
-	--t5: 2.488rem;
-	--t4: 2.074rem;
-	--t3: 1.728rem;
-	--t2: 1.44rem;
-	--t1: 1.2rem;
+	--t6: 2.027rem;
+	--t5: 1.802rem;
+	--t4: 1.602rem;
+	--t3: 1.424rem;
+	--t2: 1.266rem;
+	--t1: 1.125rem;
 	--t0: 1rem;
-	--t-1: 0.833rem;
-	--t-2: 0.694rem;
+	--t-1: 0.889rem;
+	--t-2: 0.79rem;
 }
 
 body {
