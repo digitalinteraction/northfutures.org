@@ -1,6 +1,6 @@
 ---
 layout: home.njk
-formUrl: https://forms.office.com/Pages/ResponsePage.aspx?id=yRJQnBa2wkSpF2aBT74-h-sd_7IfUsBBq1o6Cc4k1QNUNUlGMDc4WTBHQjFHMktVWVJSVFBUOVNBUC4u
+formUrl: https://oplb.uk/northfuturesmail
 ---
 
 ## EPSRC Northern Health Futures Hub
