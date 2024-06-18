@@ -1,0 +1,19 @@
+kind: Probe
+apiVersion: monitoring.coreos.com/v1
+metadata:
+  name: northfutures-website
+  labels:
+    release: prometheus
+spec:
+  interval: 15s
+  module: http_2xx
+  prober:
+    url: prometheus-blackbox-exporter.monitoring.svc.cluster.local:9115
+  targets:
+    staticConfig:
+      static:
+        - https://northfutures.openlab.dev/
+        - https://northfutures.org/
+        - https://www.northfutures.org/
+        - https://northfutures.co.uk/
+        - https://www.northfutures.co.uk/

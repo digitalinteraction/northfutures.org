@@ -9,6 +9,7 @@ resources:
   - service.yml
   - statefulset.yml
   - volume.yml
+  - probe.yml
 
 configMapGenerator:
   - name: northfutures-resources
