@@ -9,7 +9,7 @@
 		"prettier": "^3.0.0"
 	},
 	"prettier": {},
-	"version": "2.0.0",
+	"version": "2.0.1",
 	"workspaces": [
 		"theme"
 	]
