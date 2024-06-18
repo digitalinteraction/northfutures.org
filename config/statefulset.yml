@@ -24,6 +24,12 @@ spec:
             - name: resources
               mountPath: /var/lib/ghost/config.production.json
               subPath: config.json
+          readinessProbe:
+            tcpSocket: { port: www }
+            initialDelaySeconds: 5
+          livenessProbe:
+            tcpSocket: { port: www }
+            initialDelaySeconds: 5
           envFrom:
             - secretRef: { name: northfutures-env }
           env:
