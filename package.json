@@ -2,7 +2,6 @@
 	"private": "true",
 	"devDependencies": {
 		"@openlab/alembic": "^0.3.3",
-		"@tryghost/content-api": "^1.11.20",
 		"esbuild": "^0.21.1",
 		"ghost-cli": "^1.26.0",
 		"globby": "^14.0.1",
