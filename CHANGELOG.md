@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.0.3
+
+Reduce padding on people page
+
 ## 2.0.2
 
 Theme release with the correct version
