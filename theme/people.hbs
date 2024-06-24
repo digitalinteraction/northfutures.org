@@ -20,42 +20,19 @@
 		{{!-- Loop through each activity page first --}}
 		{{#get "pages" filter="tag:activity" order="title asc"  limit="all"}}
 		{{#foreach pages}}
-		{{!-- Loop through each person that has that activity tag --}}
 		{{#get "posts" filter="tag:person+tag:activity-{{slug}}" order="title asc" limit="all"}}
-		{{#if posts}}
-		<section>
-			<center-layout gutters="s0" max="80ch">
-				<div class="flow">
-					<h2>{{../title}}</h2>
-					<grid-layout min="130px" gap="s0">
-					{{#foreach posts}}
-						{{> 'person-card'}}
-					{{/foreach}}
-					</grid-layout>
-				</div>
-			</center-layout>
-		</section>
-	{{/if}}
-	{{/get}}
-	{{/foreach}}
-	{{/get}}
+		{{> 'person-grid' title=../title}}
+		{{/get}}
+		{{/foreach}}
+		{{/get}}
 
-	{{#get "posts" filter="tag:person+tag:other-people" order="title asc" limit="all"}}
-	{{#if posts}}
-	<section>
-		<center-layout gutters="s0" max="80ch">
-			<section class="flow">
-				<h2>Wider team</h2>
-				<grid-layout min="130px" gap="s0">
-				{{#foreach posts}}
-					{{> 'person-card'}}
-				{{/foreach}}
-				</grid-layout>
-			</section>
-		</center-layout>
-	</section>
-	{{/if}}
-	{{/get}}
+		{{#get "posts" filter="tag:person+tag:other-people" order="title asc" limit="all"}}
+		{{> 'person-grid' title="Wider Team"}}
+		{{/get}}
+
+		{{#get "posts" filter="tag:person+tag:advisory-board" order="title asc" limit="all"}}
+		{{> 'person-grid' title="Strategic Advisory Board"}}
+		{{/get}}
 	</stack-layout>
 </main>
 

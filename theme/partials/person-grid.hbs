@@ -1,0 +1,14 @@
+{{#if posts}}
+	<section>
+		<center-layout gutters="s0" max="80ch">
+			<section class="flow">
+				<h2>{{title}}</h2>
+				<grid-layout min="130px" gap="s0">
+				{{#foreach posts}}
+					{{> 'person-card'}}
+				{{/foreach}}
+				</grid-layout>
+			</section>
+		</center-layout>
+	</section>
+	{{/if}}
