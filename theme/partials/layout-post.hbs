@@ -1,0 +1,43 @@
+{{> 'site-header'}}
+
+{{> 'feature-image'}}
+
+<div class="bigBoldCard">
+	<center-layout class="flow" gutters="s0">
+		<stack-layout space="s2">
+			{{!-- <a href="/posts/">
+				<icon-layout>
+					{{> icon name="left"}}
+					<span>
+						All posts
+					</span>
+				</icon-layout>
+			</a> --}}
+
+			<header class="flow">
+				<h1>{{title}}</h1>
+				<cluster-layout>
+					<icon-layout>
+						{{> icon name="date" }}
+						{{date}}
+					</icon-layout>
+					
+					<icon-layout class="author">
+						{{> icon name="author"}}
+						{{authors autolink="false"}}
+					</icon-layout>
+					
+					{{> 'tag-list'}}
+				</cluster-layout>
+			</header>
+
+			<main class="flow">
+				{{{content}}}
+			</main>
+		</stack-layout>
+	</center-layout>
+</div>
+
+<div class="well accent-lazurite">
+	{{> site-footer}}
+</div>

@@ -1,0 +1,35 @@
+{{> 'site-header'}}
+
+{{> 'feature-image' feature_image=@site.cover_image }}
+
+<div class="bigBoldCard">
+	<center-layout class="flow" gutters="s0">
+		<stack-layout space="s2">
+			{{!-- <a href="/people/">
+				<icon-layout>
+					{{> icon name="left"}}
+					<span>
+						All people
+					</span>
+				</icon-layout>
+			</a> --}}
+
+			<sidebar-layout sideWidth="200px">
+				<div>
+					<frame-layout ratio="1:1">
+						<img src={{img_url feature_image size="m"}} class="rounded">
+					</frame-layout>
+				</div>
+				<div class="flow">
+					<h1>{{title}}</h1>
+					{{> 'tag-list'}}
+					{{{content}}}
+				</div>
+			</sidebar-layout>
+		</stack-layout>
+	</center-layout>
+</div>
+
+<div class="well accent-lazurite">
+	{{> site-footer}}
+</div>

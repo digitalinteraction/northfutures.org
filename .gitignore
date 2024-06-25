@@ -6,4 +6,5 @@
 node_modules
 _site
 .DS_Store
-img
+content
+north-futures.zip

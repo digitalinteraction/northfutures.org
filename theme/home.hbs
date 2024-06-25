@@ -1,0 +1,104 @@
+{{!< default}}
+
+{{#page}}
+
+{{> 'site-header'}}
+
+{{> 'feature-image'}}
+
+<main class="bigBoldCard">
+	<stack-layout space="s5">
+		<section>
+			<center-layout gutters="var(--s0)">
+				<div class="flow">
+					<h1>{{title}}</h1>
+					{{{content}}}
+				</div>
+			</center-layout>
+		</section>
+		
+		{{#get "posts" limit="3" filter="tag:news"}}
+		<section>
+			<center-layout class="flow accent-terracotta" gutters="var(--s0)" max="80ch">
+				<sidebar-layout sideWidth="12em" class="latest-posts" space="0" contentMin="70%">
+					<header>
+						<h2>News</h2>
+					</header>
+					<stack-layout space="s3">
+						{{#foreach posts}}
+						<article class="flow" style="--flow: 0.5em">
+							<h3>
+								<a href="{{url}}">{{title}} →</a>
+							</h3>
+							<p>{{excerpt}}</p>
+							<p>
+								<a href="{{url}}">
+									<icon-layout>
+										Read on
+										{{> "icon" name="right"}}
+									</icon-layout>
+								</a>
+							</p>
+						</article>
+						{{/foreach}}
+
+						<cluster-layout>
+							<a href="/posts" class="kg-btn accent-dioptase">
+								<icon-layout>
+									More posts
+									{{!-- {{> "icon" name="right"}} --}}
+								</icon-layout>
+							</a>
+						</cluster-layout>
+					</stack-layout>
+				</sidebar-layout>
+			</center-layout>
+		</section>
+		{{/get}}
+
+		{{> "contact"}}
+	</stack-layout>
+</main>
+
+<div class="well accent-lazurite">
+	<stack-layout space="s5">
+		<center-layout gutters="s0">
+			<box-layout class="card flow">
+				<stack-layout space="s2">
+					{{#get "posts" filter="tag:hash-university+featured:true" order="title ASC" limit="all"}}
+					{{#if posts}}
+					<stack-layout>
+						<h4>Universities</h4>
+						{{> 'post-grid' posts=posts size="140px"}}
+					</stack-layout>
+					{{/if}}
+					{{/get}}
+					
+					{{#get "posts" filter="tag:hash-nhs-trust+featured:true" order="title ASC" limit="all"}}
+					{{#if posts}}
+					<stack-layout>
+						<h4>NHS Trusts</h4>
+						{{> 'post-grid' posts=posts size="150px"}}
+					</stack-layout>
+					{{/if}}
+					{{/get}}
+					
+					{{#get "posts" filter="tag:hash-industry+featured:true" order="title ASC" limit="all"}}
+					{{#if posts}}
+					<stack-layout>
+						<h4>Core partners</h4>
+						{{> 'post-grid' posts=posts size="130px"}}
+					</stack-layout>
+					{{/if}}
+					{{/get}}
+				</stack-layout>
+			</box-layout>
+		</center-layout>
+
+		{{> 'site-footer'}}
+	</stack-layout>
+</div>
+
+
+
+{{/page}}

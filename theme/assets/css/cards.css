@@ -1,0 +1,50 @@
+.kg-button-card {
+	display: flex;
+	gap: var(--s-2);
+}
+
+button,
+.kg-btn {
+	background: var(--accent-main, var(--dioptase));
+	color: var(--accent-glare, white);
+	border: var(--s-4) solid rgba(255, 255, 255, 0.3);
+	border-radius: var(--s-3);
+	padding: var(--s-3) var(--s-1);
+	font-size: 1.2em;
+	text-decoration: none;
+	box-shadow: 2px 1px 4px rgba(0, 0, 0, 0.15);
+	font-weight: bold;
+}
+
+.kg-width-wide {
+	position: relative;
+	width: 85vw;
+	min-width: 100%;
+	margin: auto calc(50% - 50vw);
+	transform: translateX(calc(50vw - 50%));
+}
+
+.kg-width-full {
+	position: relative;
+	width: 100vw;
+	left: 50%;
+	right: 50%;
+	margin-left: -50vw;
+	margin-right: -50vw;
+}
+
+.kg-width-wide img {
+	max-width: 85vw;
+}
+
+.kg-width-full img {
+	max-width: 100vw;
+}
+
+.kg-header-card-content {
+	padding-inline: var(--s3);
+}
+
+.kg-header-card {
+	margin-block: var(--s3);
+}

@@ -1,0 +1,189 @@
+:root {
+	--measure: 60ch;
+	--color-background: #ffffff;
+	--color-foreground: #000000;
+	--border-thin: 1px;
+	--border-mid: 3px;
+	--border-thick: var(--s-3);
+
+	--color-anchor: royalblue;
+
+	--font-main: "Inter Var", Inter, sans-serif;
+	--font-title: "Montserrat", "Inter Var", Inter, system-ui, sans-serif;
+	--font-mono: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas,
+		Liberation Mono, monospace;
+
+	--lazurite: #002148;
+	--dioptase: #68b2b1;
+	--umber: #7f5f54;
+	--terracotta: #dd8770;
+	--sage: #b8d5a7;
+	--chalk: #f1e5cb;
+
+	--site-header-size: 3rem;
+
+	--highlight: #fafafa;
+
+	font-size: 18px;
+	background-color: var(--color-background);
+	line-height: var(--ratio);
+	font-family: var(--font-main);
+	color: var(--color-dark);
+
+	/* https://typescale.com/ */
+	--t6: 2.027rem;
+	--t5: 1.802rem;
+	--t4: 1.602rem;
+	--t3: 1.424rem;
+	--t2: 1.266rem;
+	--t1: 1.125rem;
+	--t0: 1rem;
+	--t-1: 0.889rem;
+	--t-2: 0.79rem;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+body > main {
+	flex: 1;
+}
+
+h1 {
+	font-size: var(--t5);
+}
+h2 {
+	font-size: var(--t4);
+}
+h3 {
+	font-size: var(--t3);
+}
+h4 {
+	font-size: var(--t2);
+}
+h5 {
+	font-size: var(--t1);
+}
+small {
+	font-size: var(--t-1);
+}
+sup,
+sub {
+	font-size: var(--t-2);
+}
+:is(h1, h2, h3, h4, h5, h6) {
+	font-family: var(--font-title);
+	font-weight: bold;
+	line-height: 1.2;
+}
+a {
+	color: var(--color-anchor);
+}
+
+nav [role="list"] {
+	display: flex;
+	gap: var(--s0);
+
+	/* TODO: should these be in alembic? */
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+nav [role="list"] a[aria-current="page"] {
+	text-decoration: none;
+	font-weight: bold;
+}
+
+body > main {
+	flex: 1;
+}
+
+hr {
+	--flow: var(--s3);
+	margin-block: var(--s3);
+	border: none;
+	border-bottom: 1px solid #ddd;
+	opacity: 0.5;
+}
+
+blockquote {
+	font-family: var(--font-title);
+	padding-inline-start: var(--s0);
+	padding-block: var(--s0);
+	border-inline-start: var(--s-2) solid var(--accent-main, var(--dioptase));
+	font-size: 1.2em;
+	background: #ebf6f6;
+	color: #0e4c4c;
+}
+
+figcaption {
+	text-align: center;
+	margin-block-start: var(--s-3);
+	font-style: italic;
+}
+
+.flow > * + * {
+	margin-block-start: var(--flow, 1em);
+}
+
+.accent-lazurite {
+	--accent-main: var(--lazurite);
+	--accent-glare: #d9eaff;
+}
+.accent-dioptase {
+	--accent-main: var(--dioptase);
+	--accent-glare: #eafefe;
+}
+.accent-umber {
+	--accent-main: var(--umber);
+	--accent-glare: #fef2ee;
+}
+.accent-terracotta {
+	--accent-main: var(--terracotta);
+	--accent-glare: #ffefeb;
+}
+.accent-sage {
+	--accent-main: var(--sage);
+	--accent-glare: #f7fff3;
+}
+.accent-chalk {
+	--accent-main: var(--chalk);
+	--accent-glare: #483408;
+}
+.accent-twitter {
+	--accent-main: #0f1419;
+	--accent-glare: white;
+}
+.accent-linkedin {
+	--accent-main: #0a66c2;
+	--accent-glare: white;
+}
+
+img {
+	height: auto;
+}
+
+img.rounded {
+	border-radius: 50%;
+}
+
+:is(h1, h2, h3, h4, h5, h6) + * {
+	--flow: 0.5em;
+}
+
+a:has(icon-layout span) {
+	text-decoration: none;
+}
+a > icon-layout span {
+	text-decoration: underline;
+}
+
+nav.pagination {
+	display: flex;
+	justify-content: center;
+	gap: var(--s2);
+}

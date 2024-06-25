@@ -1,0 +1,35 @@
+{
+	"url": "https://northfutures.openlab.dev",
+
+	"server": {
+		"host": "0.0.0.0",
+		"port": 2368
+	},
+
+	"database": {
+		"client": "mysql",
+		"connection": {
+			"host": "dig-mysql.ncl.ac.uk",
+			"port": 3307,
+			"user": "northfutures",
+			"database": "northfutures"
+		}
+	},
+
+	"paths": {
+		"contentPath": "/var/lib/ghost/content"
+	},
+
+	"mail": {
+		"transport": "SMTP",
+		"from": "noreply@openlab.dev",
+		"options": {
+			"host": "smtp.sendgrid.net",
+			"port": 465,
+			"service": "SendGrid",
+			"auth": {
+				"user": "apikey"
+			}
+		}
+	}
+}

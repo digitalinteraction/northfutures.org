@@ -1,0 +1,30 @@
+{
+	"name": "north-futures-2024",
+	"version": "2.1.0",
+	"author": {
+		"name": "Rob Anderson",
+		"email": "rob@andrsn.uk"
+	},
+	"keywords": [
+		"ghost-theme"
+	],
+	"config": {
+		"card_assets": {
+			"exclude": [
+				"button"
+			]
+		},
+		"posts_per_page": 15,
+		"custom": {
+			"linkedin": {
+				"type": "text"
+			},
+			"mailing_list": {
+				"type": "text"
+			},
+			"footer": {
+				"type": "text"
+			}
+		}
+	}
+}

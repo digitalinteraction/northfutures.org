@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: northfutures-content
+  labels:
+    app.kubernetes.io/name: northfutures
+spec:
+  storageClassName: local-storage
+  capacity:
+    storage: 50Gi
+  accessModes:
+    - ReadWriteOnce
+  nfs:
+    path: /dept/sage/OpenLab/apps/northfutures
+    server: fs-ncl-nfsv3-db

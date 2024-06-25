@@ -1,0 +1,29 @@
+<article class="postCard flow">
+	<h2 class="postCard-title">
+		<a href="{{url}}">
+			{{title}} →
+		</a>
+	</h2>
+	<cluster-layout class="postCard-metadata" space="s-1">
+		<icon-layout>
+			{{> icon name="date" }}
+			{{date}}
+		</icon-layout>
+
+		<icon-layout class="author">
+			{{> icon name="author"}}
+			{{authors autolink="false"}}
+		</icon-layout>
+
+		{{> 'tag-list'}}
+	</cluster-layout>
+	<p class="postCard-excerpt">{{excerpt}}</p>
+	<p class="postCard-action">
+		<a href="{{url}}">
+			<icon-layout>
+				<span>View post</span>
+				{{> icon name="right" }}
+			</icon-layout>
+		</a>
+	</p>
+</article>

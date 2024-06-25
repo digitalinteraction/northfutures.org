@@ -1,0 +1,7 @@
+{{#has tag="#Person"}}
+	{{> 'layout-person'}}
+{{else has tag="#Activity"}}
+	{{> 'layout-activity'}}
+{{else}}
+	{{> 'layout-post'}}
+{{/has}}

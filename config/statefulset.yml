@@ -1,0 +1,55 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: northfutures
+spec:
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: northfutures
+  serviceName: northfutures
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: northfutures
+    spec:
+      containers:
+        - name: app
+          image: ghost:5.82.2-alpine
+          ports:
+            - name: www
+              containerPort: 2368
+          volumeMounts:
+            - name: content
+              mountPath: /var/lib/ghost/content
+            - name: resources
+              mountPath: /var/lib/ghost/config.production.json
+              subPath: config.json
+          readinessProbe:
+            tcpSocket: { port: www }
+            initialDelaySeconds: 5
+          livenessProbe:
+            tcpSocket: { port: www }
+            initialDelaySeconds: 5
+          envFrom:
+            - secretRef: { name: northfutures-env }
+          env:
+            - { name: NODE_ENV, value: production }
+      volumes:
+        - name: resources
+          configMap: { name: northfutures-resources }
+      securityContext:
+        runAsUser: 1000
+        runAsGroup: 1000
+        fsGroup: 1000
+  volumeClaimTemplates:
+    - metadata:
+        name: content
+      spec:
+        storageClassName: local-storage
+        accessModes: ["ReadWriteOnce"]
+        selector:
+          matchLabels:
+            app.kubernetes.io/name: northfutures
+        resources:
+          requests:
+            storage: 50Gi

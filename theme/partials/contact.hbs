@@ -1,0 +1,43 @@
+{{#get "pages" filter="slug:contact-info" as |page|}}
+{{#page}}
+<center-layout class="flow accent-umber" gutters="var(--s0)">
+	<sidebar-layout sideWidth="15ch" class="contact-info">
+		<aspect-ratio ratio="1:1">
+			<img src="{{feature_image}}" class="rounded">
+		</aspect-ratio>
+		<div class="flow" style="--flow: 0.5em">
+			<h2>{{title}}</h2>
+			
+			<cluster-layout space="s-1">
+				{{#if @site.twitter}}
+				<a href="{{twitter_url}}" class="socialButton accent-twitter">
+					<icon-layout>
+						{{> "icon" name="twitter"}}
+						Twitter
+					</icon-layout>
+				</a>
+				{{/if}}
+				{{#if @custom.linkedin}}
+				<a href="{{@custom.linkedin}}" class="socialButton accent-linkedin">
+					<icon-layout>
+						{{> "icon" name="linkedin"}}
+						Linkedin
+					</icon-layout>
+				</a>
+				{{/if}}
+				{{#if @custom.mailing_list}}
+				<a href="{{@custom.mailing_list}}" class="socialButton accent-dioptase">
+					<icon-layout>
+						{{> "icon" name="email"}}
+						Mailing list
+					</icon-layout>
+				</a>
+				{{/if}}
+			</cluster-layout>
+
+			{{{content}}}
+		</div>
+	</sidebar-layout>
+</center-layout>
+{{/page}}
+{{/get}}

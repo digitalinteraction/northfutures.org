@@ -1,0 +1,157 @@
+body {
+	position: relative;
+}
+
+.siteHeader {
+	padding-inline: var(--s-2) var(--s0);
+}
+.siteHeader sidebar-layout {
+	justify-content: space-between;
+}
+.siteHeader cluster-layout {
+	min-height: var(--site-header-size);
+}
+.siteHeader img {
+	max-height: 34px;
+	height: 100%;
+	max-width: 50vw;
+}
+.siteHeader nav {
+	display: inline-flex;
+	justify-content: flex-end;
+	padding-block: var(--s-2);
+}
+
+/* .siteFooter {} */
+
+body > .bigBoldCard {
+	flex: 1;
+}
+
+/* Site Hero */
+
+.siteHero {
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	max-height: 60vh;
+	position: relative;
+}
+.siteHero-s {
+	max-height: 30vh;
+}
+.siteHero > img {
+	width: 100%;
+}
+.siteHero-content {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.6));
+	width: 100%;
+}
+
+/* Site header */
+
+.siteHeader:has(+ .siteHero) {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+
+	margin-inline: var(--s0);
+	border-bottom-left-radius: var(--s1);
+	border-bottom-right-radius: var(--s1);
+	z-index: 1;
+	background-color: var(--color-background);
+
+	box-shadow: 3px 6px 15px rgba(0, 0, 0, 0.24);
+}
+
+@media (max-width: 468px) {
+	.siteHeader > sidebar-layout > cluster-layout {
+		justify-content: center;
+	}
+}
+
+/* Well */
+
+.well {
+	background-color: var(--accent-main);
+	color: var(--accent-glare);
+	position: relative;
+
+	padding-block: var(--s4) var(--s1);
+}
+.well::before {
+}
+
+/* Big Bold Card */
+
+.bigBoldCard {
+	position: relative;
+	background: white;
+	padding-block: var(--s4);
+}
+.siteHero + .bigBoldCard::before {
+	content: "";
+	display: block;
+	background-image: url(/assets/img/rounded-head.svg);
+	background-size: 100%;
+	background-position: right 50%;
+	aspect-ratio: 350 / 10;
+	position: absolute;
+	bottom: calc(100% - 1px);
+	left: 0;
+	right: 0;
+	z-index: 1;
+	background-repeat: no-repeat;
+}
+.bigBoldCard:has(+ .well)::after {
+	content: "";
+	display: block;
+	background-image: url(/assets/img/rounded-tail.svg);
+	background-size: 100%;
+	background-position: right 50%;
+	aspect-ratio: 350 / 10;
+	position: absolute;
+	top: calc(100% - 1px);
+	left: 0;
+	right: 0;
+	z-index: 1;
+	background-repeat: no-repeat;
+}
+
+/* Breadcrumbs */
+.breadcrumbs:has(+ stack-layout) {
+	margin-block-end: var(--s1);
+}
+
+.breadcrumbs icon-layout span {
+	text-decoration: underline;
+}
+
+/* Post grid */
+
+grid-layout.postGrid {
+	align-items: center;
+}
+
+/* Post card */
+/* ... */
+.postCard {
+	--flow: 0.5em;
+}
+
+.socialButton {
+	background-color: var(--accent-main, var(--dioptase));
+	color: var(--accent-glare, white);
+	border: none;
+	border-radius: var(--s-3);
+	padding: var(--s-3) var(--s-1);
+	text-decoration: none;
+	box-shadow: 2px 1px 4px rgba(0, 0, 0, 0.15);
+	font-weight: bold;
+}

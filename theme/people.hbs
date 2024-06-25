@@ -1,0 +1,43 @@
+{{!< default}}
+
+{{#page}}
+
+{{> 'site-header' }}
+
+{{> 'feature-image' }}
+
+<main class="bigBoldCard">
+	<stack-layout space="s3">
+		<section>
+			<center-layout gutters="s0" max="80ch">
+				<div class="flow">
+					<h1>{{title}}</h1>
+					{{{content}}}
+				</div>
+			</center-layout>
+		</section>
+
+		{{!-- Loop through each activity page first --}}
+		{{#get "pages" filter="tag:activity" order="title asc"  limit="all"}}
+		{{#foreach pages}}
+		{{#get "posts" filter="tag:person+tag:activity-{{slug}}" order="title asc" limit="all"}}
+		{{> 'person-grid' title=../title}}
+		{{/get}}
+		{{/foreach}}
+		{{/get}}
+
+		{{#get "posts" filter="tag:person+tag:other-people" order="title asc" limit="all"}}
+		{{> 'person-grid' title="Wider Team"}}
+		{{/get}}
+
+		{{#get "posts" filter="tag:person+tag:advisory-board" order="title asc" limit="all"}}
+		{{> 'person-grid' title="Strategic Advisory Board"}}
+		{{/get}}
+	</stack-layout>
+</main>
+
+<div class="well accent-lazurite">
+	{{> 'site-footer'}}
+</div>
+
+{{/page}}
