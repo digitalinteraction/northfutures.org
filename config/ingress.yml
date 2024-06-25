@@ -8,7 +8,7 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-    - host: northfutures.openlab.dev
+    - host: www.northfutures.org
       http:
         paths:
           - path: /
@@ -20,5 +20,5 @@ spec:
                   name: www
   tls:
     - hosts:
-        - northfutures.openlab.dev
-      secretName: northfutures.openlab.dev
+        - www.northfutures.org
+      secretName: www.northfutures.org
