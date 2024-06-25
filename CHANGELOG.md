@@ -1,5 +1,10 @@
 # Changelog
 
+## 2.1.0
+
+- Add "advisory board" people section
+- Add signature to the footer
+
 ## 2.0.3
 
 Reduce padding on people page
