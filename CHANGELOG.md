@@ -1,5 +1,9 @@
 # Changelog
 
+## next
+
+- Tweak logos on the home page
+
 ## 2.1.0
 
 - Add "advisory board" people section

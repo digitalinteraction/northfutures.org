@@ -63,12 +63,12 @@
 <div class="well accent-lazurite">
 	<stack-layout space="s5">
 		<center-layout gutters="s0">
-			<box-layout class="card flow">
+			<box-layout class="card">
 				<stack-layout space="s2">
+					<h4>Core partners</h4>
 					{{#get "posts" filter="tag:hash-university+featured:true" order="title ASC" limit="all"}}
 					{{#if posts}}
 					<stack-layout>
-						<h4>Universities</h4>
 						{{> 'post-grid' posts=posts size="140px"}}
 					</stack-layout>
 					{{/if}}
@@ -77,7 +77,6 @@
 					{{#get "posts" filter="tag:hash-nhs-trust+featured:true" order="title ASC" limit="all"}}
 					{{#if posts}}
 					<stack-layout>
-						<h4>NHS Trusts</h4>
 						{{> 'post-grid' posts=posts size="150px"}}
 					</stack-layout>
 					{{/if}}
@@ -86,7 +85,6 @@
 					{{#get "posts" filter="tag:hash-industry+featured:true" order="title ASC" limit="all"}}
 					{{#if posts}}
 					<stack-layout>
-						<h4>Core partners</h4>
 						{{> 'post-grid' posts=posts size="130px"}}
 					</stack-layout>
 					{{/if}}
