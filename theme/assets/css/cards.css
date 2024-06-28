@@ -48,3 +48,9 @@ button,
 .kg-header-card {
 	margin-block: var(--s3);
 }
+
+.kg-embed-card iframe {
+	width: 100%;
+	aspect-ratio: 16 / 9;
+	height: auto;
+}

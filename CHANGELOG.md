@@ -1,7 +1,8 @@
 # Changelog
 
-## next
+## 2.1.1
 
+- Improve iframe styles
 - Tweak logos on the home page
 
 ## 2.1.0

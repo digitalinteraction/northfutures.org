@@ -64,29 +64,23 @@
 	<stack-layout space="s5">
 		<center-layout gutters="s0">
 			<box-layout class="card">
-				<stack-layout space="s2">
+				<stack-layout>
 					<h4>Core partners</h4>
 					{{#get "posts" filter="tag:hash-university+featured:true" order="title ASC" limit="all"}}
 					{{#if posts}}
-					<stack-layout>
-						{{> 'post-grid' posts=posts size="140px"}}
-					</stack-layout>
+					{{> 'post-grid' posts=posts size="140px"}}
 					{{/if}}
 					{{/get}}
 					
 					{{#get "posts" filter="tag:hash-nhs-trust+featured:true" order="title ASC" limit="all"}}
 					{{#if posts}}
-					<stack-layout>
-						{{> 'post-grid' posts=posts size="150px"}}
-					</stack-layout>
+					{{> 'post-grid' posts=posts size="150px"}}
 					{{/if}}
 					{{/get}}
 					
 					{{#get "posts" filter="tag:hash-industry+featured:true" order="title ASC" limit="all"}}
 					{{#if posts}}
-					<stack-layout>
-						{{> 'post-grid' posts=posts size="130px"}}
-					</stack-layout>
+					{{> 'post-grid' posts=posts size="130px"}}
 					{{/if}}
 					{{/get}}
 				</stack-layout>
