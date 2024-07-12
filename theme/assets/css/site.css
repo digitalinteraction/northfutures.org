@@ -14,7 +14,6 @@ body {
 .siteHeader img {
 	max-height: 34px;
 	height: 100%;
-	max-width: 50vw;
 }
 .siteHeader nav {
 	display: inline-flex;
@@ -70,7 +69,21 @@ body > .bigBoldCard {
 	box-shadow: 3px 6px 15px rgba(0, 0, 0, 0.24);
 }
 
-@media (max-width: 468px) {
+@media screen and (max-width: 520px) {
+	:root {
+		--site-header-size: 2.5rem;
+	}
+	.siteHeader:has(+ .siteHero) {
+		margin-inline: var(--s-1);
+		border-bottom-left-radius: var(--s-1);
+		border-bottom-right-radius: var(--s-1);
+	}
+	.siteHeader > cluster-layout {
+		gap: 0;
+	}
+	.siteHeader > cluster-layout > nav {
+		padding-block: var(--s-4);
+	}
 	.siteHeader > sidebar-layout > cluster-layout {
 		justify-content: center;
 	}

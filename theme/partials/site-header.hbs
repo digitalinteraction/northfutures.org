@@ -1,6 +1,11 @@
 <header class="siteHeader">
 	<cluster-layout justify="space-between" align="center" space="var(--s-3)">
-		<a href="/"><img src="{{asset "img/brand-dark.png"}}" height="34"></a>
+		<a href="/">
+			<picture>
+				<source media="(max-width: 520px)" srcset="{{asset "img/icon-dark.png"}}">
+				<img src="{{asset "img/brand-dark.png"}}" height="34">
+			</picture>
+		</a>
 		<nav>
 			{{navigation}}
 		</nav>

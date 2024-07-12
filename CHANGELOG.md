@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.1.2
+
+- Fix the logo on mobile screens using the logomark instead
+
 ## 2.1.1
 
 - Improve iframe styles
