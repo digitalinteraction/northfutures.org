@@ -81,6 +81,7 @@ sub {
 }
 a {
 	color: var(--color-anchor);
+	word-break: break-all;
 }
 
 nav [role="list"] {

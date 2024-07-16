@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.1.3
+
+- Fix anchors not-breaking
+
 ## 2.1.2
 
 - Fix the logo on mobile screens using the logomark instead
