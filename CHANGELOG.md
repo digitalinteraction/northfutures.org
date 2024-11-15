@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.1.5
+
+- Don't show post metadata on pages
+
 ## 2.1.4
 
 - Fix anchor breaking

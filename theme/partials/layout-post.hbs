@@ -16,6 +16,7 @@
 
 			<header class="flow">
 				<h1>{{title}}</h1>
+				{{#is "post"}}
 				<cluster-layout>
 					<icon-layout>
 						{{> icon name="date" }}
@@ -29,6 +30,7 @@
 					
 					{{> 'tag-list'}}
 				</cluster-layout>
+				{{/is}}
 			</header>
 
 			<main class="flow">
