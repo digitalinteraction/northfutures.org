@@ -1,0 +1,31 @@
+{{!< default}}
+
+{{> 'site-header'}}
+
+{{#tag}}
+{{> 'feature-image'}}
+{{/tag}}
+
+<main class="bigBoldCard">
+	<center-layout class="flow" gutters="s0">
+		<stack-layout space="s3">
+			<header class="flow">
+				{{#tag}}
+				<h1>{{name}}</h1>
+				<p>{{{description}}}</p>
+				{{/tag}}
+			</header>
+
+			{{#foreach posts}}
+			{{> 'opportunity-card'}}
+			{{/foreach}}
+
+			{{pagination}}
+
+		</stack-layout>
+	</center-layout>
+</main>
+
+<div class="well accent-lazurite">
+	{{> 'site-footer'}}
+</div>

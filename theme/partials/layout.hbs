@@ -2,6 +2,8 @@
 	{{> 'layout-person'}}
 {{else has tag="#Activity"}}
 	{{> 'layout-activity'}}
+{{else has tag="Opportunities"}}
+	{{> 'layout-opportunity'}}
 {{else}}
 	{{> 'layout-post'}}
 {{/has}}

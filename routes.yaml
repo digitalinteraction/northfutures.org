@@ -23,6 +23,11 @@ collections:
     permalink: /people/{slug}/
     template: person
     filter: tag:person
+  /opportunities/:
+    permalink: /opportunities/{slug}/
+    template: opportunity
+    filter: tag:opportunity
+    data: tag.opportunity
   /posts/:
     permalink: /posts/{slug}/
     template: index

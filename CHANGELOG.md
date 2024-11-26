@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.2.0
+
+- Add Opportunities collection / posts
+
 ## 2.1.5
 
 - Don't show post metadata on pages
