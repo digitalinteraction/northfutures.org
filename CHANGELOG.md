@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.2.1
+
+- Fix nav overflow
+
 ## 2.2.0
 
 - Add Opportunities collection / posts
